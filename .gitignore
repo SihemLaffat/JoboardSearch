@@ -8,6 +8,7 @@
 /var/
 /vendor/
 /.env
+/composer.lock
 
 
 ###< symfony/framework-bundle ###
