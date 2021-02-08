@@ -44,12 +44,15 @@
 
         {{ form_start(registrationForm) }}
         
-        <div class="text-center mt-5"> {{form_row(registrationForm.email)}} </div>
-        <div class="form-group text-center"> {{ form_row(registrationForm.plainPassword, {
-                label: 'Password'
+        <div class="mt-5"> {{form_row(registrationForm.sexe )}} </div>
+        <div class="mt-2"> {{form_row(registrationForm.nom, {'attr': {'class':'form-control'}})}} </div>
+        <div class="mt-2"> {{ form_row(registrationForm.prenom, {'attr': {'class':'form-control'}})}}</div>
+        <div class="mt-2"> {{form_row(registrationForm.email, {'attr': {'class':'form-control'}})}} </div>
+        <div class="mt-2"> {{ form_row(registrationForm.plainPassword,{'attr': {'class':'form-control'}}, {
+                label: 'Password',
             }) }} </div>
-            <div class="form-group text-center"> {{ form_row(registrationForm.agreeTerms) }}</div>
-            <div class="form-group text-center"> <button type="submit" class="btn bg-warning p-2"> Valider</button></div>
+            <div class="text-center"> {{ form_row(registrationForm.agreeTerms) }}</div>
+            <div class="text-center"> <button type="submit" class="btn bg-warning p-2"> Valider</button></div>
         {{ form_end(registrationForm) }}
     </div>
 {% endblock %}

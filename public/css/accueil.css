@@ -1,58 +1,9 @@
-/* général */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
-.flex{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.bg_jaune{
-    background-image: radial-gradient(circle, #ead956, #e8c248, #e5ac3d, #df9637, #d78033);
-}
-
-.bg_gris{
-    background-color: rgb(214, 214, 209);
-}
-
-/* fin général */
-
-
-/* header  */
-
-.logo_base{
-    width: 150px;
-}
-
-.logo{ 
-    width: 300px;
-    align-items: center;
-}
-
-.nav-link{ /* navbar */
-    font-size: 25px;
-    margin: 5px 30px;
-}
-/* fin header  */
-
-
-/* footer */
-a {
-    color:black;
-    font-size: 15px;
-}
-
-.text-uppercase{
-    font-size: 15px;
-}
-/* fin footer */
-
-
-/* body page accueil */
 
 .content{
     min-height: 100px;
@@ -73,9 +24,13 @@ a {
 }
 
 .ct3{
+    width:48%;
+    margin: 20px;
     background-color: #FFB74D;
 }
 .ct4{
+    width:48%;
+    margin: 20px;
     background-image: linear-gradient(to bottom, #c9cccc, #d2d5d5, #dcdfdf, #e5e8e8, #eff2f2, #eff2f2, #eff2f2, #eff2f2, #e5e8e8, #dcdfdf, #d2d5d5, #c9cccc); 
 }
 
@@ -94,6 +49,3 @@ a {
     align-items: center;
     margin-top: 20px;
 }
-
-/* Register formulaire inscription */
-
