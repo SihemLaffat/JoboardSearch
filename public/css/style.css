@@ -12,15 +12,7 @@
     width: 100%;
     display: flex;
   }
-  .button {
-    color: blue;
-  }
-  .blueButton {
-    background: cornflowerblue;
-  }
-  .modalButton {
-    background: cornflowerblue;
-  }
+
   
   .dashboardContainer {
     background-color: #f4f4f4;
@@ -34,22 +26,22 @@
   
   .brouillon,
   .brouillon .dashboardColumnTitle i {
-    color: #f5a623;
+    color: #76541d;
   }
   
   .candidature,
   .candidature .dashboardColumnTitle i {
-    color: #fc390f;
+    color: #461206;
   }
   
   .relance,
   .relance .dashboardColumnTitle i {
-    color: #1cdcff;
+    color: #0c8397;
   }
   
   .entretien,
   .entretien .dashboardColumnTitle i {
-    color: #00e6a8;
+    color: #174639;
   }
   
   .dashboardColumnTitle,
@@ -97,10 +89,7 @@
   }
   
   
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
+
   .dashboardBody {
     padding-top: 80px;
   }
