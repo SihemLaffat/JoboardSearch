@@ -11,26 +11,57 @@
 
 
 
-        <div class="text-center">
-            <h1>Mes candidatures ! ✅</h1>
-        </div>
-        <hr>
-        <hr>
+    <div class="text-center">
+        <h1>Mes candidatures ! ✅</h1>
+    </div>
+    <hr>
+    <hr>
     <div class="tabindex" tabindex="-1" role="group" style="outline: none;">
 
-            <div class="dashboardBody row">
-                <div class="col-md-3">
-                    <div class="dashboardColumn brouillon">
-                        <div class="dashboardColumnTitle">
-                            <span>
-                                <i class="fa fa-long-arrow-alt-right"></i> Je vais postuler 
-                                <span class="dashboardCandidatureCount">(0)</span>
-                            </span>
+        <div class="dashboardBody row">
+            <div class="col-md-3">
+                <div class="dashboardColumn brouillon">
+                    <div class="dashboardColumnTitle">
+                        <span>
+                            <i class="fa fa-long-arrow-alt-right"></i> Je vais postuler 
+                            <span class="dashboardCandidatureCount">(0)</span>
+                        </span>
+                    </div>
+                    <div type="0" class="newCandidatureButton"><strong>+</strong> Ajouter une candidature
+                    </div>
+                <div class="dashboardColumnContainer" style="min-height: 255px;">
+                    <div data-react-beautiful-dnd-draggable="4" tabindex="0" data-react-beautiful-dnd-drag-handle="4" 
+                         aria-roledescription="Draggable item. Press space bar to lift" draggable="false">
+                        <div class="card" style="width: 27rem;">
+                            <div class="dashboardCards">
+                                <h5 class="card-title">TITRE : </h5>
+                                <p class="card-text">Description : </p>
+                                <p class="card-text">Téléphone : </p>
+                                <p class="card-text">Adresse : </p>
+                                <p class="card-text">Ville : </p>
+                                <p class="card-text">Email : </p>
+                                <a href="#" class="btn btn-primary">Voi plus</a>
+                            </div>
                         </div>
                         <div type="0" class="newCandidatureButton"><strong>+</strong><a href="{{ ('candidature') }}"> Ajouter une candidature </a></div>
                         <div class="dashboardColumnContainer" style="min-height: 538px;"></div>
                     </div>
                 </div>
+                    <div  class="dashboardColumnContainer" style="min-height: 538px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="dashboardColumn candidature">
+                    <div class="dashboardColumnTitle">
+                         <span>
+                            <i class="fa fa-check"></i> J'ai postulé 
+                            <span class="dashboardCandidatureCount">(0)</span>
+                        </span>
+                    </div>
+                    <div type="1" class="newCandidatureButton"><strong>+</strong> Ajouter une candidature</div>
 
                 <div class="col-md-3">
                     <div class="dashboardColumn candidature">
@@ -43,9 +74,10 @@
                         <div type="1" class="newCandidatureButton"><strong>+</strong> <a href="{{ ('candidature') }}"> Ajouter une candidature </a></div>
                         <div class="dashboardColumnContainer" style="min-height: 538px;"></div>
                     </div>
-                </div>
+            </div>
 
                 <div class="col-md-3">
+
                     <div class="dashboardColumn relance">
                         <div class="dashboardColumnTitle">
                             <span>
@@ -57,11 +89,12 @@
                         <div class="dashboardColumnContainer" style="min-height: 538px;"></div>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="dashboardColumn entretien">
                         <div class="dashboardColumnTitle">
-                            <span><i class="fa fa-comment-dots"></i> La rencontre du Boss<span
-                                    class="dashboardCandidatureCount">(0)</span>
+                            <span>
+                            <i class="fa fa-comment-dots"></i> La rencontre du Boss<span class="dashboardCandidatureCount">(0)</span>
                             </span>
                         </div>
                         <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{ ('candidature') }}"> Ajouter une candidature </a></div>
@@ -69,7 +102,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 
