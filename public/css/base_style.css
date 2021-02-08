@@ -11,6 +11,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .bg_jaune{
     background-image: radial-gradient(circle, #ead956, #e8c248, #e5ac3d, #df9637, #d78033);
 }
@@ -46,58 +47,4 @@ a {
     font-size: 15px;
 }
 /* fin footer */
-
-
-/* body page accueil */
-
-.container-fluid {
-   width:1OO% ;
-   background-image:url('{{ asset('img/phoenix.jpg') }}')""
-
-}
-
-.content{
-    min-height: 200px;
-    margin: 5px;
-}
-
-
-.ct1{
-    background-color: ;
-    width:48%;
-    margin-left: 20px;
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    background-image: linear-gradient(to bottom, #c9cccc, #d2d5d5, #dcdfdf, #e5e8e8, #eff2f2, #eff2f2, #eff2f2, #eff2f2, #e5e8e8, #dcdfdf, #d2d5d5, #c9cccc);
-}
-.ct2{
-    background-color;
-    width:48%;
-    margin-right: 20px;
-}
-.ct3{
-    background-color: #FFB74D;
-    /* background-image:url('{{ asset('img/noteG.png') }}') */
-}
-.ct4{
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    background-image: linear-gradient(to bottom, #c9cccc, #d2d5d5, #dcdfdf, #e5e8e8, #eff2f2, #eff2f2, #eff2f2, #eff2f2, #e5e8e8, #dcdfdf, #d2d5d5, #c9cccc); 
-}
-
-#prstn{
-    font-size: 30px;
-    font-size: bold;
-}
-
-.connect{
-    width: 200px;
-    align-items: center;
-}
-.chrono{
-    width: 100px;
-    align-items: center;
-}
-
-/* Register formulaire inscription */
 
