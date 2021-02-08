@@ -1,0 +1,133 @@
+
+  body {
+    font-family: Roboto, sans-serif;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  .dashboardHeader {
+    width: 100%;
+    display: flex;
+  }
+  .button {
+    color: blue;
+  }
+  .blueButton {
+    background: cornflowerblue;
+  }
+  .modalButton {
+    background: cornflowerblue;
+  }
+  
+  .dashboardContainer {
+    background-color: #f4f4f4;
+  }
+  
+  .fa,
+  .fas {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+  }
+  
+  .brouillon,
+  .brouillon .dashboardColumnTitle i {
+    color: #f5a623;
+  }
+  
+  .candidature,
+  .candidature .dashboardColumnTitle i {
+    color: #fc390f;
+  }
+  
+  .relance,
+  .relance .dashboardColumnTitle i {
+    color: #1cdcff;
+  }
+  
+  .entretien,
+  .entretien .dashboardColumnTitle i {
+    color: #00e6a8;
+  }
+  
+  .dashboardColumnTitle,
+  .newCandidatureButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dashboardColumnTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .dashboardColumn {
+    background: #fff;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 14px 0 rgba(66, 67, 69, 0.11);
+    padding: 10px 10px 25px;
+    margin-bottom: 50px;
+    border: 1px solid #d3d3d3;
+    border-top: 5px solid;
+  }
+  
+  .newCandidatureButton {
+    height: 50px;
+    border: 1px dashed #979797;
+    border-radius: 4px !important;
+    box-shadow: 0 0 4px 0 #e8edf5;
+    color: #979797;
+    margin: 0 30px 15px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+    cursor: pointer;
+  }
+  .dashboardColumnTitle,
+  .newCandidatureButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .dashboardBody {
+    padding-top: 80px;
+  }
+  
+  element.style {
+    outline: none;
+  }
+  
+ 
+  .w3-row-padding img {
+    margin-bottom: 20px;
+  }
+  
+  /* Remove margins from "page content" on small screens */
+  @media only screen and (max-width: 600px) {
+    #main {
+      margin-left: 0;
+    }
+  }
+  
+  .w3-jumbo {
+    font-size: 90px !important;
+  }
+  
+  
+  .pb-3, .py-3 {
+    padding-bottom: 0rem!important;
+  }
+  
+  
