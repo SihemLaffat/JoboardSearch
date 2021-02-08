@@ -87,6 +87,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  .tabindex {
+    margin-top: -100px;
+}
   
   
 
@@ -96,13 +100,11 @@
   
   element.style {
     outline: none;
+    min-height: 538px;
   }
   
  
-  .w3-row-padding img {
-    margin-bottom: 20px;
-  }
-  
+
   /* Remove margins from "page content" on small screens */
   @media only screen and (max-width: 600px) {
     #main {
