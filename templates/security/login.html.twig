@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+     <!-- Entete global-->
+        <div class="bg_jaune text-center text-lg-start p-4">
+    
+            <!-- container entete -->
+            <div class="container p-4">
+
+                <div class="row flex">
+
+                    <!--Logo-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
+                        <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo">                        
+                    </div> <!-- Fin logo-->
+                
+                    <!--Nom du site-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                   
+                        <h1 class="">JoBoardSearch</h1>
+                    </div> <!-- FIN Grid column nom du site-->
+                    
+                    <!--slogan-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
+                        <h5 class="">slogan: bla bla bla</h5>
+                   </div> <!-- Fin slogan-->
+
+                </div> <!--Fin row-->      
+            </div> <!-- Fin container entete-->                
+        </div> <!-- Fin entete global -->
+{% endblock %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    <div class="container p-5">
+        <a class="mt- p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
+        <h1 class="mb-5 mt-5 bg-secondary text-light text-center">Connectez-vous</h1>
+        <label for="inputEmail">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+        <input type="hidden" name="_csrf_token"
+            value="{{ csrf_token('authenticate') }}"
+        >
+    
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+    <button class="btn btn-lg btn-warning mt-4 mb-4" type="submit">
+        Valider
+    </button>
+    </div>
+</form>
+{% endblock %}

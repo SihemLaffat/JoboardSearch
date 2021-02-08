@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{%block header %}
+     <!-- Entete global-->
+        <div class="bg_jaune text-center text-lg-start p-4">
+    
+            <!-- container entete -->
+            <div class="container p-4">
+
+                <div class="row flex">
+
+                    <!--Logo-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
+                        <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo">                        
+                    </div> <!-- Fin logo-->
+                
+                    <!--Nom du site-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                   
+                        <h1 class="">JoBoardSearch</h1>
+                    </div> <!-- FIN Grid column nom du site-->
+                    
+                    <!--slogan-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
+                        <h5 class="">slogan: bla bla bla</h5>
+                   </div> <!-- Fin slogan-->
+
+                </div> <!--Fin row-->      
+            </div> <!-- Fin container entete-->                
+        </div> <!-- Fin entete global -->
+{% endblock %}
+
+{% block title %}Formulaire d'inscription{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+   
+
+    <div class="container p-5">  
+         <a class="mt-2 p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
+        <h1 class="mt-5 text-center bg-secondary text-light">Formulaire d'inscription</h1>
+
+        {{ form_start(registrationForm) }}
+        
+        <div class="text-center mt-5"> {{form_row(registrationForm.email)}} </div>
+        <div class="form-group text-center"> {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }} </div>
+            <div class="form-group text-center"> {{ form_row(registrationForm.agreeTerms) }}</div>
+            <div class="form-group text-center"> <button type="submit" class="btn bg-warning p-2"> Valider</button></div>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
