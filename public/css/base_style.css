@@ -50,11 +50,11 @@ a {
 
 /* body page accueil */
 
-.container-fluid {
+/*.container-fluid {
    width:1OO% ;
    background-image:url('{{ asset('img/phoenix.jpg') }}')""
 
-}
+}*/
 
 .content{
     min-height: 200px;
