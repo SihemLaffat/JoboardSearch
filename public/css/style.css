@@ -1,3 +1,5 @@
+/* CSS CARDS DASHBOARD */
+
 
   body {
     font-family: Roboto, sans-serif;
@@ -13,7 +15,6 @@
     display: flex;
   }
 
-  
   .dashboardContainer {
     background-color: #f4f4f4;
   }
@@ -92,8 +93,6 @@
     margin-top: -100px;
 }
   
-  
-
   .dashboardBody {
     padding-top: 80px;
   }
@@ -103,22 +102,6 @@
     min-height: 538px;
   }
   
- 
-
-  /* Remove margins from "page content" on small screens */
-  @media only screen and (max-width: 600px) {
-    #main {
-      margin-left: 0;
-    }
-  }
   
-  .w3-jumbo {
-    font-size: 90px !important;
-  }
-  
-  
-  .pb-3, .py-3 {
-    padding-bottom: 0rem!important;
-  }
   
   
