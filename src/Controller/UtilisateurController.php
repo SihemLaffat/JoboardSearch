@@ -8,21 +8,25 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
-* Require ROLE_USER for *every* controller method in this class.
-*
-* @IsGranted("ROLE_USER")
-*/
+ * ProfilController
+ * @package App\Controller
+ * @Route("/compte")
+ * 
+ */
 
 class UtilisateurController extends AbstractController
 {
     /**
      * @Route("/utilisateur", name="utilisateur")
+     * @IsGranted("ROLE_USER")
      */
     
     public function index(): Response
     {
+        $user = $this->getUser();
+        
         return $this->render('utilisateur/utilisateur.html.twig', [
-            'controller_name' => 'UtilisateurController',
+            'utilisateur' => $user,
         ]);
     }
 }
