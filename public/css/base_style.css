@@ -11,19 +11,22 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
 .bg_jaune{
     background-image: radial-gradient(circle, #ead956, #e8c248, #e5ac3d, #df9637, #d78033);
 }
 
 .bg_gris{
-    background-color: rgb(214, 211, 209);
+    background-color: rgb(214, 214, 209);
 }
 
 /* fin général */
 
 
 /* header  */
+
+.logo_base{
+    width: 150px;
+}
 
 .logo{ 
     width: 300px;

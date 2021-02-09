@@ -11,7 +11,7 @@
             
             {% block stylesheets %}{% endblock %}
             <link rel="stylesheet" href="{{asset('css/base_style.css')}}"> 
-            <link rel="stylesheet" href="{{asset('css/cards_style.css')}}"> 
+            <link rel="stylesheet" href="{{asset('css/accueil.css')}}"> 
     </head>
 
     <body>
@@ -26,7 +26,7 @@
 
                     <!--Logo-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
-                        <img src="{{ asset('img/logo.png') }}" alt="logo">                        
+                        <img class="logo_base"src="{{ asset('img/logo.png') }}" alt="logo">                        
                     </div> <!-- Fin logo-->
                 
                     <!--Nom du site-->
@@ -44,7 +44,7 @@
         </div> <!-- Fin entete global -->
 
     <!-- barre de avigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg_gris">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,10 +68,11 @@
                     Mon compte
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Mes informations</a>
+                    <a class="dropdown-item" href="{{ path('utilisateur') }}">Profil</a>
                     <a class="dropdown-item" href="#">cv</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Déconnexion</a>
+                    <a class="dropdown-item" href="{{ path('app_logout') }}"> Déconnexion</a>
+                    
                     </div>
                 </li>
             </div>
@@ -79,17 +80,14 @@
         {% endblock %}
         
             
-            
-
-
 
         {% block body %} {% endblock %}
         
 
 
         <!-- Footer -->
-{% block footer %}
-    <footer class="text-center text-lg-start bg-light">
+    {% block footer %}
+    <footer class="text-center text-lg-start bg_gris">
     
         <!-- Grid container -->
         <div class="container p-4">
@@ -177,5 +175,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         {% block javascripts %}{% endblock %}
         <script src="{{asset('js/scripts.js')}}"> </script>
+        <script src="{{asset('js/app.js')}}"> </script>
     </body>
 </html>
