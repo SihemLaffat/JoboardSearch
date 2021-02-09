@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+
+{% block body %}
+       
+    <a class="mt-2 p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
+
+  <div class="container">
+    
+    <h2 class="mt-5 text-center bg-secondary text-light"> Mes coordonnées </h2>
+
+    <p class="m-4">Nom de famille : {{utilisateur.nom }} </p>
+    <p class="m-4">Prénom : {{utilisateur.prenom }}</p>
+    <p class="m-4">Email : {{utilisateur.email }}</p>
+    <p class="m-4">Avatar : {{utilisateur.photo }}</p> 
+ </div>
+
+
+{% endblock %}
