@@ -24,6 +24,8 @@
     font-weight: 900;
   }
   
+  /******************** Couleurs Cards ********************/
+
   .brouillon,
   .brouillon .dashboardColumnTitle i {
     color: #76541d;
@@ -43,6 +45,8 @@
   .entretien .dashboardColumnTitle i {
     color: #174639;
   }
+
+  /******************** Couleurs Cards ********************/
   
   .dashboardColumnTitle,
   .newCandidatureButton {
@@ -128,19 +132,13 @@
 }
 
 .dashboardCard, .dashboardColumnTitle i {
-  margin-right: 10px;
+  
+  margin-right: 100px;
+  
 }
 
-.dashboardCardActions>div {
-  padding-right: 0;
-  padding-left: 0;
-  text-align: center;
-  font-size: 40px;
-  color: #7d7d7d;
-  line-height: 20px;
-  cursor: pointer;
-}
-  
+
+
   
   
   
