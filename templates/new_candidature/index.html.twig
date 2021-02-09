@@ -10,11 +10,7 @@
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="newCandidatureFormBackground"><div class="newCandidatureFormContainer"><h2>Ajouter une nouvelle carte</h2><h3>Etape 1 sur 2</h3><form novalidate=""><div><div class="row newCandidatureSelect"><div class="newCandidatureFieldLabel">Etat d'avancement</div><div><select name="candidatureState"><option default="" value="0">Je vais postuler</option><option value="1">J'ai postulé</option><option value="2">J'ai relancé</option><option value="3">Entretien</option></select></div></div><div class="newCandidatureFieldLabel">Nouvelle Candidature</div><div tabindex="0" class="newCandidatureSourceBloc active"><div class="newCandidatureSourceBlocTitle">Remplissage automatique</div><div class="newCandidatureSourceBlocCheck"><i class="fas fa-check-circle"></i></div><div style="clear: both;"></div>Lorsque vous avez le lien Internet de l'offre d'emploi (ou de la petite annonce) qui a été diffusée sur un site Internet (site de l'entreprise, Pôle emploi, Indeed, Le Bon Coin ...).<div class="candidatureField"><div class="newCandidatureFieldLabel">Lien Internet de l'offre</div><input name="importURL" type="text" class="candidatureTitle" placeholder="Collez ici le lien Internet de l'offre" value=""></div></div><div tabindex="0" class="newCandidatureSourceBloc"><div class="newCandidatureSourceBlocTitle">Remplissage manuel</div><div class="newCandidatureSourceBlocCheck"><i class="far fa-circle"></i></div><div style="clear: both;"></div>Lorsque vous n'avez pas de lien Internet ou que l'offre a été déposée sur un journal, sur une vitrine, sur les réseaux sociaux, sur un pdf ...<div class="candidatureField"><div class="newCandidatureFieldLabel">Titre ou poste de l'offre</div><input name="nomCandidature" class="candidatureTitle" type="text" placeholder="Ex : Boucher en CDI" value=""></div></div></div><div class="newCandidatureActions"><button type="button" class="back">Retour</button><button type="submit">Suivant</button></div></form></div></div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/JoboardSearch/src/Controller/NewCandidatureController.php'|file_link(0) }}">src/Controller/NewCandidatureController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/JoboardSearch/templates/new_candidature/index.html.twig'|file_link(0) }}">templates/new_candidature/index.html.twig</a></code></li>
-    </ul>
 </div>
 {% endblock %}
