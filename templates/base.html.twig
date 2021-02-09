@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ ('cards') }}">Tableau de bord <span class="sr-only">(current)</span></a>
+                       <a class="nav-link" href="{{ path('cards') }}">Tableau de bord <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Récapitulatif</a>
@@ -141,16 +141,16 @@
 
                     <ul class="list-unstyled">
                     <li>
-                        <a href="#!" class="text-dark">Accueil</a>
+                        <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Tableau de bord</a>
+                        <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
                     </li>
                     <li>
                         <a href="#!" class="text-dark">Récapitutalif</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-dark">Mon compte</a>
+                        <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>
                     </li>
                     </ul>
                 </div> <!-- Fin Grid column 3-->
