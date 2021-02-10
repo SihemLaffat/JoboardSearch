@@ -1,0 +1,148 @@
+/* CSS CARDS DASHBOARD */
+
+  body {
+    font-family: Roboto, sans-serif;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  .dashboardHeader {
+    width: 100%;
+    display: flex;
+  }
+
+  .dashboardContainer {
+    background-color: #f4f4f4;
+  }
+  
+  .fa,
+  .fas {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+  }
+  
+  /******************** Couleurs Cards ********************/
+
+  .brouillon,
+  .brouillon .dashboardColumnTitle i {
+    color: #76541d;
+  }
+  
+  .candidature,
+  .candidature .dashboardColumnTitle i {
+    color: #461206;
+  }
+  
+  .relance,
+  .relance .dashboardColumnTitle i {
+    color: #0c8397;
+  }
+  
+  .entretien,
+  .entretien .dashboardColumnTitle i {
+    color: #174639;
+  }
+
+  /******************** Couleurs Cards ********************/
+  
+  .dashboardColumnTitle,
+  .newCandidatureButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dashboardColumnTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .dashboardColumn {
+    background: #fff;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 14px 0 rgba(66, 67, 69, 0.11);
+    padding: 10px 10px 25px;
+    margin-bottom: 50px;
+    border: 1px solid #d3d3d3;
+    border-top: 5px solid;
+  }
+  
+  .newCandidatureButton {
+    height: 50px;
+    border: 1px dashed #979797;
+    border-radius: 4px !important;
+    box-shadow: 0 0 4px 0 #e8edf5;
+    color: #979797;
+    margin: 0 30px 15px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+    cursor: pointer;
+  }
+  .dashboardColumnTitle,
+  .newCandidatureButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .tabindex {
+    margin-top: -100px;
+}
+  
+  .dashboardBody {
+    padding-top: 80px;
+  }
+  
+  element.style {
+    outline: none;
+    min-height: 538px;
+  }
+
+  .dashboardCard {
+    border: 1.5px solid #d9e1ff;
+    border-radius: 4px!important;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+  .buttonCardAdvice {
+    width: 100%;
+    background-color: transparent;
+    color: #000;
+    border-color: transparent;
+    text-transform: uppercase;
+}
+
+.dashboardCardMenu {
+  border-right: 1px solid #d9e1ff;
+  height: 40px;
+}
+
+.dashboardCard, .dashboardColumnTitle i {
+  
+  margin-right: 100px;
+  
+}
+
+ul li {
+  list-style: none;
+}
+
+
+
+  
+  
+  
