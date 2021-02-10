@@ -1,4 +1,7 @@
 /* CSS CARDS DASHBOARD */
+* {
+  list-style: none;
+}
 
   body {
     font-family: Roboto, sans-serif;
@@ -137,9 +140,7 @@
   
 }
 
-.dashboardColumnContainer ul li  {
-  list-style: none;
-}
+
 
 
 

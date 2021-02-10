@@ -51,3 +51,7 @@ a {
 }
 /* fin footer */
 
+.dashboardColumnContainer ul li {
+    list-style-type: none;
+}
+
