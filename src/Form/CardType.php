@@ -4,9 +4,10 @@ namespace App\Form;
 
 use App\Entity\Card;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CardType extends AbstractType
 {
@@ -18,12 +19,14 @@ class CardType extends AbstractType
             ->add('ville')
             ->add('telephone')
             ->add('email')
+            ->add('url', UrlType::class)
+
             ->add('status_card', ChoiceType::class,[
                 'choices'  => [
-                    'S1' => 'status 1',
-                    'S2' => 'status 2',
-                    'S3' => 'status 3',
-                    'S4' => 'status 4',
+                    'Va postuler' => 'va postuler',
+                    'A postulé' => 'postule',
+                    'A relancé' => 'relancer',
+                    'A rencontré' => 'entretien',
                     
                 ],
                 'data' => $options['defaultStatus'],

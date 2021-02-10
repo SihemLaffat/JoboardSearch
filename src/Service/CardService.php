@@ -7,10 +7,10 @@ use Symfony\Component\Serializer\Encoder\CsvEncoder;
 
 class CardService {
     
-    public static $STATUS_1 = 'status 1'; 
-    public static $STATUS_2 = 'status 2'; 
-    public static $STATUS_3 = 'status 3'; 
-    public static $STATUS_4 = 'status 4'; 
+    public static $STATUS_1 = 'va postuler'; 
+    public static $STATUS_2 = 'postule'; 
+    public static $STATUS_3 = 'relancer'; 
+    public static $STATUS_4 = 'rencontre'; 
 
     public $cardRepositery;
     public $csvEncodeur;
