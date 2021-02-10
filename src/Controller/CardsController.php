@@ -13,22 +13,22 @@ class CardsController extends AbstractController
 
     
     /**
-     * @Route("/recapitulatif", name="cards_synthese")
+     * @Route("/synthese", name="cards_synthese")
      */
     public function cardsUserForSynthese(CardRepository $cardRepository): Response
     {
 
-        $user =$this->getUser();
+        $user =$this->getUser(); 
         $userCards = $cardRepository->findAll();
-        // $userCards = $cardRepository->findBy(['utilisateur'=>$user])
+        
         return $this->render('cards/index.html.twig', [
             'controller_name' => 'CardsController',
-            'cards' =>$userCards,
+            'usercards' =>$userCards,
            
         ]);
     }
     /**
-     * @Route("/recapitulatif/user_data_downloard", name="User_synthese_download")
+     * @Route("/synthese/user_data_downloard", name="User_synthese_download")
      */
 
     public function cardsUserDownload(CardService $cardService): Response
@@ -41,5 +41,5 @@ class CardsController extends AbstractController
 
         return $response;
 
-    }
+   }
 }
