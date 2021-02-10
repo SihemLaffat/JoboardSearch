@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class CardsController extends AbstractController
+class SyntheseCardsController extends AbstractController
 {
 
     
@@ -21,7 +21,7 @@ class CardsController extends AbstractController
         $user =$this->getUser(); 
         $userCards = $cardRepository->findAll();
         
-        return $this->render('cards/index.html.twig', [
+        return $this->render('Synthesecards/index.html.twig', [
             'controller_name' => 'CardsController',
             'usercards' =>$userCards,
            
