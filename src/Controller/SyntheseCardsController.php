@@ -19,7 +19,7 @@ class SyntheseCardsController extends AbstractController
     {
 
         $user =$this->getUser(); 
-        $userCards = $cardRepository->findAll();
+        $userCards = $cardRepository->findBy(['utilisateur'=>$user]);
         
         return $this->render('Synthesecards/index.html.twig', [
             'controller_name' => 'CardsController',
