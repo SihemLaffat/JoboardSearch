@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card index{% endblock %}
+
+{% block body %}
+    <h1>Card index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Ville</th>
+                <th>Telephone</th>
+                <th>Email</th>
+                <th>CreatedAt</th>
+                <th>Status_card</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for card in cards %}
+            <tr>
+                <td>{{ card.id }}</td>
+                <td>{{ card.titre }}</td>
+                <td>{{ card.description }}</td>
+                <td>{{ card.ville }}</td>
+                <td>{{ card.telephone }}</td>
+                <td>{{ card.email }}</td>
+                <td>{{ card.createdAt ? card.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ card.statusCard }}</td>
+                <td>
+                    <a href="{{ path('card_show', {'id': card.id}) }}">show</a>
+                    <a href="{{ path('card_edit', {'id': card.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('cards') }}">Create new</a>
+{% endblock %}

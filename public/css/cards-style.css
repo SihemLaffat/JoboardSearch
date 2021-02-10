@@ -1,4 +1,7 @@
 /* CSS CARDS DASHBOARD */
+* {
+  list-style: none;
+}
 
   body {
     font-family: Roboto, sans-serif;
@@ -140,6 +143,10 @@
 ul li {
   list-style: none;
 }
+
+
+
+
 
 
 
