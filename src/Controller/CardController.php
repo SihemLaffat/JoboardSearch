@@ -53,7 +53,7 @@ class CardController extends AbstractController
             $entityManager->persist($card);
             $entityManager->flush();
 
-            return $this->redirectToRoute('card_index');
+            return $this->redirectToRoute('cards');
         }
 
         return $this->render('card/new.html.twig', [
