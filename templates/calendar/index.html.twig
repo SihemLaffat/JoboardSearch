@@ -1,4 +1,7 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+{% endblock %}
  
 {% block title %}Hello CalendarController!{% endblock %}
 
@@ -7,8 +10,34 @@
 
     <h1>Hello calendrier ✅</h1>
 
-{{ dump(data) }}
-   <div id="calendar"></div>
 
+   <div id="calendar" class="p-2"></div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    window.onload = () => {
+        let calendarElt = document.querySelector("#calendar")
+        let calendar = new FullCalendar.Calendar(calendarElt, {
+            initialView: 'timeGridWeek',
+            locale: 'fr',
+            timeZone: 'Europe/Paris',
+            headerToolbar: {
+                start: 'prev,next today',
+                center: 'title',
+                end: 'dayGridMonth,timeGridWeek'
+            },
+            events: {{ data|raw }},
+           
+        })
+
+       
+        calendar.render()
+    }
+</script>
+  
+  
 {% endblock %}
 
