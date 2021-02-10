@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CardsController!{% endblock %}
+
+{% block body %}
+
+
+<div class="w-100 p-5 rounded">
+    <div class="pb-2">
+        <a href="#" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Télecharger</a>
+       
+    </div>
+    <div class="">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr> 
+                    <th scope="col">Date de création</th>  
+                    <th scope="col">Titre</th>
+                    <th scope="col">description</th>
+                    <th scope="col">ville</th>
+                    <th scope="col">Lien</th>
+                    <th scope="col">coordonnées</th>   
+                </tr>
+            </thead>
+            <tbody> 
+        {% for cards in usercards %}
+                <tr>
+                   
+                    <td>{{ cards.createdAt | date('Y-m-d')}}</td>
+                    <td>{{ cards.titre }}</td>
+                    <td>{{ cards.titre }}</td>
+                    <td>{{ cards.description }}</td>
+                    <td>{{ cards.ville }}</td>
+                    <td>{{ cards.url }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+           {% if usercards is empty %}
+                <p>pas de candidature en cours</p>
+            {% endif %}
+
+    </div>            
+</div>
+{% endblock %}

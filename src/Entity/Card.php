@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CardRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CardRepository;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ORM\Entity(repositoryClass=CardRepository::class)
+ * @ApiResource
  */
 class Card
 {
@@ -51,6 +53,10 @@ class Card
      * @ORM\Column(type="string", length=255)
      */
     private $status_card;
+       /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $url;
 
     /**
      * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="cards")
@@ -145,6 +151,18 @@ class Card
     public function setStatusCard(string $status_card): self
     {
         $this->status_card = $status_card;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
 
         return $this;
     }
