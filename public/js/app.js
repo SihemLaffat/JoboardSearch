@@ -39,4 +39,3 @@ function dragLeave() {
     e.preventDefault();
     
 }
-
