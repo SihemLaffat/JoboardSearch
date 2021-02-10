@@ -2,12 +2,18 @@
 
 namespace App\Service;
 
+use App\Repository\CardRepository;
+use Symfony\Component\Serializer\Encoder\CsvEncoder;
+
 class CardService {
     
     public static $STATUS_1 = 'status 1'; 
     public static $STATUS_2 = 'status 2'; 
     public static $STATUS_3 = 'status 3'; 
     public static $STATUS_4 = 'status 4'; 
+
+    public $cardRepositery;
+    public $csvEncodeur;
 
     
     public function getStatusCard(int $statusNumber){
@@ -26,4 +32,18 @@ class CardService {
         }
     
     }
+
+    
+   public function __construct(CardRepository $cardRepositery){
+
+       $this->cardRepositery= $cardRepositery;
+       $this->csvEncodeur = new CsvEncoder();
+    }
+   public function csvExport($user){
+
+        // $allCard = $this->cardRepositery->findAll();
+        $allCard= $this->cardRepository->findBy(['utilisateur'=>$user]);
+       $dataCsv = $this->csvEncodeur->encode($allCard, 'csv');
+       return $dataCsv;
+   }
 }

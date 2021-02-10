@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Services\CardService;
+use App\Service\CardService;
 use App\Repository\CardRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
