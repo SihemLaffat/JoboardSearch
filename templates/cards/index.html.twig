@@ -25,6 +25,7 @@
             <tbody> 
         {% for cards in usercards %}
                 <tr>
+                    <td>{{ cards.titre }}</td>
                     <td>{{ cards.createdAt | date('Y-m-d')}}</td>
                     <td>{{ cards.titre }}</td>
                     <td>{{ cards.description }}</td>
