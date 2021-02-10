@@ -24,7 +24,7 @@ class CalendarController extends AbstractController
                 'start'=> $event->getCreatedAt()->format('Y-m-d H:i:s'),
                 'title'=> $event->getTitre(),
                 'description'=> $event->getStatusCard(),
-                'url'=> $event->getUrl(),   
+                 
             ];
             
         }
