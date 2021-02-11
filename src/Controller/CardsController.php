@@ -14,7 +14,7 @@ class CardsController extends AbstractController
      * @Route("/cards", name="cards")
      */
     public function index(CardRepository $cardRepository): Response
-    {   
+    {
         $user =$this->getUser(); 
         $cards = $cardRepository->findBy(['utilisateur' => $user]);
         
@@ -24,7 +24,7 @@ class CardsController extends AbstractController
 
         return $this->render('cards/index.html.twig', [
             'controller_name' => 'CardsController',
-            'cardAll' => $cards
+             'cardAll' => $cards
         ]);
     }
 
