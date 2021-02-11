@@ -13,9 +13,9 @@ class CalendarController extends AbstractController
      * @Route("/calendar", name="calendar_user")
      */
     public function index(CardRepository $cardRepository): Response
-    {
-        $events = $cardRepository->findAll();
-        //findBy(['utilisateur'=>$user]);
+    {   
+        $user =$this->getUser();
+        $events = $cardRepository->findBy(['utilisateur'=>$user]);
         $candidature = [];
         
         foreach($events as $event){
