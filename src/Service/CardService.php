@@ -7,10 +7,10 @@ use Symfony\Component\Serializer\Encoder\CsvEncoder;
 
 class CardService {
     
-    public static $STATUS_1 = 'va postuler'; 
-    public static $STATUS_2 = 'postule'; 
-    public static $STATUS_3 = 'relancer'; 
-    public static $STATUS_4 = 'rencontre'; 
+    public static $VA_POSTULER = 'va postuler'; 
+    public static $POSTULE = 'postuler'; 
+    public static $RELANCER = 'relancer'; 
+    public static $RENCONTRE = 'rencontre'; 
 
     public $cardRepositery;
     public $csvEncodeur;
@@ -20,13 +20,13 @@ class CardService {
         
         switch($statusNumber){
             case 1:
-                return CardService::$STATUS_1;
+                return CardService::$VA_POSTULER;
             case 2:
-                return CardService::$STATUS_2;
+                return CardService::$POSTULE;
             case 3:
-                return CardService::$STATUS_3;
+                return CardService::$RELANCER;
             case 4:
-                return CardService::$STATUS_4;
+                return CardService::$RENCONTRE;
             default:
                 return null;
         }
@@ -34,16 +34,17 @@ class CardService {
     }
 
     
-   public function __construct(CardRepository $cardRepositery){
+   public function __construct(CardRepository $cardRepository){
 
-       $this->cardRepositery= $cardRepositery;
+       $this->cardRepository= $cardRepository;
        $this->csvEncodeur = new CsvEncoder();
     }
    public function csvExport($user){
 
-        // $allCard = $this->cardRepositery->findAll();
-        $allCard= $this->cardRepository->findBy(['utilisateur'=>$user]);
-       $dataCsv = $this->csvEncodeur->encode($allCard, 'csv');
+       $allCard = $this->cardRepository->findAllCsv($user);
+       
+       //$allCard= $this->cardRepository->findBy(['utilisateur'=>$user]);
+       $dataCsv = $this->csvEncodeur->encode($allCard, 'csv', [CsvEncoder::DELIMITER_KEY => ';']);
        return $dataCsv;
    }
 }

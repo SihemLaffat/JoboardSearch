@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\CardService;
 use App\Repository\CardRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,12 +20,47 @@ class CardsController extends AbstractController
         $cards = $cardRepository->findBy(['utilisateur' => $user]);
         
         $vaPostuler =[];
-        $postule =[];
-        
+        $postuler =[];
+        $relancer =[];
+        $entretien =[];
+
+        foreach($cards as $card){
+
+            $result = [
+                'status_card' =>$card->getStatusCard(),
+                'id'=> $card->getId(),
+                'titre'=>$card->getTitre(),
+                'description'=> $card->getDescription(),
+                'ville'=> $card->getVille(),
+                'telephone'=> $card->getTelephone(),
+                'email'=> $card->getEmail(),
+                'CreatedAd'=> $card->getCreatedAt()->format('Y-m-d H:i:s'),     
+            ];
+         if( $card->getStatusCard() == CardService::$VA_POSTULER )  {
+            $vaPostuler []= $result;
+
+        }
+          
+        if( $card->getStatusCard() == CardService::$POSTULE )  {
+            $postuler []= $result;
+
+        }
+        if( $card->getStatusCard() == CardService::$RELANCER )  {
+            $relancer []= $result;
+
+        }  
+        if( $card->getStatusCard() == CardService::$RENCONTRE )  {
+            $entretien []= $result;
+
+        }
+        }
 
         return $this->render('cards/index.html.twig', [
             'controller_name' => 'CardsController',
-             'cardAll' => $cards
+             'vapostuler' => $vaPostuler,
+             'postuler' => $postuler,
+             'relancer' => $relancer,
+             'entretien' => $entretien,
         ]);
     }
 

@@ -28,7 +28,7 @@ class SyntheseCardsController extends AbstractController
         ]);
     }
     /**
-     * @Route("/synthese/user_data_downloard", name="User_synthese_download")
+     * @Route("/synthese/user_data_download", name="User_synthese_download")
      */
 
     public function cardsUserDownload(CardService $cardService): Response

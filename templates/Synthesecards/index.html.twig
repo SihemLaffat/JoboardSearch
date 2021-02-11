@@ -7,7 +7,7 @@
 
 <div class="w-100 p-5 rounded">
     <div class="pb-2">
-        <a href="#" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Télecharger</a>
+        <a href="{{'synthese/user_data_download'}}" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Télecharger</a>
        
     </div>
     <div class="">
@@ -28,10 +28,10 @@
                    
                     <td>{{ cards.createdAt | date('Y-m-d')}}</td>
                     <td>{{ cards.titre }}</td>
-                    <td>{{ cards.titre }}</td>
                     <td>{{ cards.description }}</td>
                     <td>{{ cards.ville }}</td>
                     <td>{{ cards.url }}</td>
+                    <td>{{ cards.email }}</td>
                 </tr>
             {% endfor %}
             </tbody>
