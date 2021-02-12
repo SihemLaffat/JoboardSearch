@@ -10,20 +10,20 @@
                 <div class="row flex">
 
                     <!--Logo-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
+                    <div class="col-3 mb-4 mb-md-0">                    
                         <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo">                        
                     </div> <!-- Fin logo-->
-                
+                    <div class="col-lg-9">
                     <!--Nom du site-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                   
-                        <h1 class="">JoBoardSearch</h1>
+                    <div>                   
+                        <h1>JoBoardSearch</h1>
                     </div> <!-- FIN Grid column nom du site-->
                     
                     <!--slogan-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
-                        <h5 class="">slogan: bla bla bla</h5>
+                    <div class=" ">                    
+                        <h5 class="align-center">Créez vos opportunités à l'aide</h5>
                    </div> <!-- Fin slogan-->
-
+                  </div>
                 </div> <!--Fin row-->      
             </div> <!-- Fin container entete-->                
         </div> <!-- Fin entete global -->
@@ -35,28 +35,28 @@
 <main class="container-fluid">
     <div class="global column">
 
-        <div id="descriptif" class="row text-center mt-5 mb-5 ">  
-            <div class="col content ct1 ">
+        <div id="descriptif" class="row text-center mt-5">  
+            <div class="col content ct1 shadow p-3 mb-5 bg-white rounded">
                 <p id="descript" class="pt-5"> Avec JoBoardSearch, <br> la recherche d'emploi et de stage <br> n'a jamais été aussi simple.<br>Grâce à son systheme drag n drog, <br> la gestion des candidatures, la planification des entretiens <br> sont devenu un jeu d'enfant.</p>
             </div>
 
-            <div class="col content ct2 illustration text-center ">
-                <img src="{{ asset('img/illustration1.png') }}" alt="illustration"> 
+            <div class="col illustration shadow  bg-white rounded ">
+                <img src="{{ asset('img/dashboard.jpg') }}" alt="illustration"> 
             </div>
         </div>
 
         <div id="connection" class="row text-center mt-5 mb-5">  
             
-            <a class="col content ct3" href="{{ path('app_login') }}">             
-                <div class="col content pt-5">
+            <a class="col content ct3 shadow p-3 mb-5 bg-white rounded" href="{{ path('app_login') }}">             
+                <div class="col content pt-5 ">
                     <h1> J'ai déjà un compte  </h1> 
                     <h3>Connectez-vous</h3>
                     <img class="img-connect" src="{{ asset('img/connect.png') }}" alt="connection">
                 </div>
             </a> 
 
-            <a class="col ct4 content" href="{{ path('app_register') }}"> 
-                 <div class="col content p-5">
+            <a class="col ct4 content shadow p-3 mb-5 bg-white rounded" href="{{ path('app_register') }}"> 
+                 <div class="col content p-5 ">
                     <h1> Je n'ai pas de compte </h1>
                     <h3> Inscrivez-Vous <br> En 2 clics, simple, rapide et gratuit !</h3>
                     <img class="img-chrono"src="{{ asset('img/chrono.png') }}" alt="inscription">
