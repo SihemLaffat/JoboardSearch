@@ -21,17 +21,14 @@
     background-color: #f4f4f4;
   }
   
-  .fa,
-  .fas {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-  }
+ 
   
   /******************** Couleurs Cards ********************/
 
   .brouillon,
   .brouillon .dashboardColumnTitle i {
     color: #76541d;
+
   }
   
   .candidature,
@@ -61,7 +58,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #000;
-    margin-left: 30px;
+    margin-left: -5vh;
     margin-top: 15px;
     margin-bottom: 15px;
   }
