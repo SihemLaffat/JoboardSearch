@@ -18,10 +18,9 @@
     <div class="tabindex" tabindex="-1" role="group" style="outline: none;">
 
         <div class="dashboardBody row">
-            <div class="col-md-3">
-                
-                <div class="dashboardColumn brouillon card choice">
-                    <div class="dashboardColumnTitle">
+            <div class="col-md-3 dashboardColumnContainer" data-status-number='1'>
+                <div class="dashboardColumn brouillon card choice dashboardColumnContainer" data-status-number='1'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='1'>
                         <span>
                             <i class=""></i> Je vais postuler 
                             <span class="dashboardCandidatureCount">(0)</span>
@@ -29,11 +28,11 @@
                     </div>
                     
                     <div type="0" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/1') }}">Ajouter une candidature</a></div>
-                        <div class="dashboardColumnContainer">  
+                        <div class="dashboardColumnContainer" data-status-number='1'>  
                          
                             {% for cards in vapostuler %} 
                             <div class="dashboardCards cards card" >
-                              <ul draggable="true">
+                              <ul draggable="true" data-card-id="{{cards.id}}">
                                 <p class="card-header">{{cards.titre}}</p>  
                                 <p class="card-text">{{cards.description}}</p>
                                 <p class="card-text">Contact: {{cards.email}}</p>
@@ -47,20 +46,19 @@
                     </div>
                 </div>
 
-            <div class="col-md-3">
-                <div class="choice dashboardColumn candidature">
-                    <div class="dashboardColumnTitle">
+            <div class="col-md-3 dashboardColumnContainer" data-status-number='2'>
+                <div class="choice dashboardColumn candidature dashboardColumnContainer" data-status-number='2'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='2'>
                          <span>
                             <i class=""></i> J'ai postulé 
                             <span class="dashboardCandidatureCount">(0)</span>
                         </span>
                     </div>
                     <div type="1" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/2') }}">Ajouter une candidature</a></div>
-
-                        <div class="dashboardColumnContainer">
+                        <div class="dashboardColumnContainer" data-status-number='2'>
                             {% for cards in postuler %} 
                             <div class="dashboardCards cards card" >
-                              <ul draggable="true">
+                              <ul draggable="true" data-card-id="{{cards.id}}">
                                 <p class="card-header">{{cards.titre}}</p>  
                                 <p class="card-text">{{cards.description}}</p>
                                 <p class="card-text">Contact: {{cards.email}}</p>
@@ -75,20 +73,19 @@
                     </div>
             </div>
 
-                <div class="col-md-3">
-
-                    <div class=" choice dashboardColumn relance">
-                        <div class="dashboardColumnTitle">
+                <div class="col-md-3 dashboardColumnContainer"  data-status-number='3'>
+                    <div class=" choice dashboardColumn relance dashboardColumnContainer"  data-status-number='3'>
+                        <div class="dashboardColumnTitle dashboardColumnContainer"  data-status-number='3'>
                             <span>
                                 <i class=""></i> J'ai relancé 
                                 <span class="dashboardCandidatureCount">(0)</span>
                             </span>
                         </div>
                         <div type="2" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/3') }}">Ajouter une candidature</a></div>
-                        <div class="dashboardColumnContainer">
+                        <div  class="dashboardColumnContainer" data-status-number='3'>
                             {% for cards in relancer %} 
                             <div class="dashboardCards cards card" >
-                              <ul draggable="true">
+                              <ul draggable="true" data-card-id="{{cards.id}}">
                                 <p class="card-header">{{cards.titre}}</p>  
                                 <p class="card-text">{{cards.description}}</p>
                                 <p class="card-text">Contact: {{cards.email}}</p>
@@ -103,18 +100,18 @@
                     </div>
                 </div>
 
-            <div class="col-md-3">
-                <div class="choice dashboardColumn entretien">
-                    <div class="dashboardColumnTitle">
+            <div class="col-md-3 dashboardColumnContainer"  data-status-number='4'>
+                <div class="choice dashboardColumn entretien dashboardColumnContainer"  data-status-number='4'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer"  data-status-number='4'>
                         <span>
                         <i class=""></i> La rencontre du Boss<span class="dashboardCandidatureCount">(0)</span>
                         </span>
                     </div>
                     <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/4') }}">Ajouter une candidature</a></div>
-                    <div class="dashboardColumnContainer">
+                    <div  class="dashboardColumnContainer" data-status-number='4'>
                             {% for cards in entretien %} 
                             <div class="dashboardCards cards card" >
-                              <ul draggable="true">
+                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='4'>
                                 <p class="card-header">{{cards.titre}}</p>  
                                 <p class="card-text">{{cards.description}}</p>
                                 <p class="card-text">Contact: {{cards.email}}</p>

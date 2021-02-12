@@ -6,16 +6,20 @@ use App\Service\CardService;
 use App\Repository\CardRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-
-class CardsController extends AbstractController
+/**
+ * @IsGranted("ROLE_USER")
+ */
+class CardFrontController extends AbstractController
 {
     /**
      * @Route("/cards", name="cards")
      */
     public function index(CardRepository $cardRepository): Response
     {
+        
         $user =$this->getUser(); 
         $cards = $cardRepository->findBy(['utilisateur' => $user]);
         
@@ -61,16 +65,6 @@ class CardsController extends AbstractController
              'postuler' => $postuler,
              'relancer' => $relancer,
              'entretien' => $entretien,
-        ]);
-    }
-
-    /**
-     * @Route("/all_cards", name="cards_all")
-     */
-    public function cardsAll(): Response
-    {
-        return $this->render('cards/index.html.twig', [
-            'controller_name' => 'CardsController',
         ]);
     }
 }

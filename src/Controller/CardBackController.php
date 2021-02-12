@@ -12,12 +12,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * @Route("/card")
  * @IsGranted("ROLE_USER")
  */
-class CardController extends AbstractController
+class CardBackController extends AbstractController
 {
     /**
      * @Route("/", name="card_index", methods={"GET"})
@@ -104,5 +105,31 @@ class CardController extends AbstractController
         }
 
         return $this->redirectToRoute('card_index');
+    }
+    
+
+    /**
+     * @Route("/{id}/status", name="card_update-status", methods={"PUT"})
+     *
+     * @param Card $card
+     * @param integer $statusNumber
+     * @return void
+     */
+    public function updateStatusCard(Request $request, Card $card, CardService $cardService, CardRepository $cardRepository){
+        
+        if($card->getUtilisateur->getId() !== $this->getUser()->getId()){
+            throw new AccessDeniedException("Vous n'êtes pas autorisée à modifier cette carte");
+        }
+        
+        $statusNumber = $request->request->get('statusNumber');
+        $statusCard = $cardService->getStatusCard($statusNumber);
+        
+        $card->setStatusCard($statusCard);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($card);
+        $entityManager->flush();
+        
+        return new Response('Card correctly updated');
     }
 }
