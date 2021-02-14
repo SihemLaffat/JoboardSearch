@@ -24,9 +24,9 @@ class CardType extends AbstractType
             ->add('status_card', ChoiceType::class,[
                 'choices'  => [
                     'Va postuler' => 'va postuler',
-                    'A postulé' => 'postule',
+                    'A postulé' => 'postuler',
                     'A relancé' => 'relancer',
-                    'A rencontré' => 'entretien',
+                    'A rencontré' => 'rencontre',
                     
                 ],
                 'data' => $options['defaultStatus'],

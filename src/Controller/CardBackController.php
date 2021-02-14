@@ -117,7 +117,7 @@ class CardBackController extends AbstractController
      */
     public function updateStatusCard(Request $request, Card $card, CardService $cardService, CardRepository $cardRepository){
         
-        if($card->getUtilisateur->getId() !== $this->getUser()->getId()){
+        if($card->getUtilisateur()->getId() !== $this->getUser()->getId()){
             throw new AccessDeniedException("Vous n'êtes pas autorisée à modifier cette carte");
         }
         
