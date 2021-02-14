@@ -24,22 +24,22 @@
 
   .brouillon,
   .brouillon .dashboardColumnTitle i {
-    color: #76541d;
+    color: #ebb154;
   }
   
   .candidature,
   .candidature .dashboardColumnTitle i {
-    color: #461206;
+    color: #2f8d1c;
   }
   
   .relance,
   .relance .dashboardColumnTitle i {
-    color: #0c8397;
+    color: #1db0ca;
   }
   
   .entretien,
   .entretien .dashboardColumnTitle i {
-    color: #174639;
+    color: #732fa0;
   }
 
   /******************** Couleurs Cards ********************/
@@ -54,7 +54,6 @@
     font-size: 20px;
     font-weight: 700;
     color: #000;
-    margin-left: 30px;
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -124,11 +123,7 @@
   height: 40px;
 }
 
-.dashboardCard, .dashboardColumnTitle i {
-  
-  margin-right: 100px;
-  
-}
+
 
 ul li {
   list-style: none;

@@ -1,13 +1,6 @@
 //JQuery
 $(document).ready(function() {
     
-    //Smooth scroll down
-    $('nav a[href*="#"]').on('click', function () {
-        $('html, body').animate( {
-            scrollTop: $($(this).attr('href')).offset().top - 100
-        }, 2000);
-    });
-
 
     //Initialisation AOS
     AOS.init({
@@ -68,29 +61,29 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const slides = document.querySelectorAll('.slide');
 
-let index = 0;
-display(index);
-function display (index) {
+let indexS = 0;
+display(indexS);
+function display (indexS) {
 	slides.forEach((slide) => {
 		slide.style.display = 'none';
 	});
-	slides[index].style.display = 'flex';
+	slides[indexS].style.display = 'flex';
 };
 
 function nextSlide () {
-	index++;
-	if (index > slides.length - 1) {
-		index = 0;
+	indexS++;
+	if (indexS > slides.length - 1) {
+		indexS = 0;
 	}
-	display(index);
+	display(indexS);
 };
 
 function prevSlide () {
-	index--;
-	if (index < 0) {
-		index = slides.length - 1;
+	indexS--;
+	if (indexS< 0) {
+		indexS = slides.length - 1;
 	}
-	display(index);
+	display(indexS);
 };
 
 next.addEventListener('click', nextSlide);

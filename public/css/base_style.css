@@ -10,10 +10,12 @@
 }
 /*commmons style*/
 
-h1, nav ul{
+h1,h2,h5, nav ul{
     font-family: 'Permanent Marker', cursive;
 }
-
+ul li{
+    font-size: 1rem;
+}
 p, a{
     font-family: 'Montserrat', sans-serif;
 }
@@ -38,7 +40,7 @@ p, a{
 /* header  */
 
 .logo_base{
-    width: 150px;
+    width: 180px;
 }
 
 .logo{ 
@@ -47,8 +49,11 @@ p, a{
 }
 
 .nav-link{ /* navbar */
-    font-size: 25px;
-    margin: 5px 30px;
+    font-size: 1.2rem;
+    
+}
+nav-bg{
+    background-color: aquamarine;
 }
 /* fin header  */
 
@@ -68,12 +73,26 @@ a {
     list-style-type: none;
 }
 
+.buttonSmall {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .2rem 2rem;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 6px 6px 4px 0px rgba(0,0,0,0.30);
+    display: inline-flex;
+    align-items: center;
+}
+
 
 
 /* REGISTER CSS */
 
 .register{
-    background: -webkit-linear-gradient(left, #49d144, #e4e476);
+    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFB88C, #DE6262);
     width: 100%;
 }
 .register-left{
@@ -128,7 +147,7 @@ a {
     border: none;
     border-radius: 1.5rem;
     padding: 2%;
-    background: #c9cc00;
+    background: #E36262;
     color: #fff;
     font-weight: 600;
     width: 50%;
@@ -137,7 +156,7 @@ a {
 .register .nav-tabs{
     margin-top: 3%;
     border: none;
-    background: #07cc00;
+    background: #FEB58A;
     border-radius: 1.5rem;
     width: 28%;
     float: right;
@@ -155,8 +174,8 @@ a {
 }
 .register .nav-tabs .nav-link-p.active{
     width: 100px;
-    color: #07cc00;
-    border: 2px solid #4bcc00;
+    color: #E36262;
+    border: 2px solid  #682222;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
 }
@@ -166,4 +185,46 @@ a {
     margin-bottom: -15%;
     color: #495057;
 }
+
+/* LOGIN CSS */
+
+.login-block{
+background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+float:left;
+width:100%;
+padding : 50px 0;
+}
+
+.containerL {background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.butn-login{background: #DE6262; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;background-color: rgb(222, 98, 98,0.4);}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:rgb(24, 23, 23);}
+
+
+
+@media only screen and (max-width: 996px) {
+   .banner-text{
+       width: auto;
+       bottom: 20px;
+   }
+}
+
+@media only screen and (max-width: 580px) {
+    .banner-text{
+        display: none;
+    }
+}
+
 

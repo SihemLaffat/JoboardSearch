@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
        
+
+        
+{% block title %}Hello CardsController!{% endblock %}
+
+{% block body %}
 {% block header %}
         <!-- Entete global-->
         <div class="bg_jaune text-center text-lg-start">
@@ -64,22 +69,16 @@
             </div>
         </nav>
 {% endblock %}
-        
-{% block title %}Hello CardsController!{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 
 
     <div class="text-center">
-        <h1>Mes candidatures ! ✅</h1>
+        <h1>Mes candidatures !</h1>
     </div>
     <hr>
     <hr>
+ <section class="container-fluid">   
     <div class="tabindex tabindexcard" tabindex="-1" role="group" style="outline: none;">
 
         <div class="dashboardBody row">
@@ -88,22 +87,22 @@
                 <div class="dashboardColumn brouillon card choice">
                     <div class="dashboardColumnTitle">
                         <span>
-                            <i class=""></i> Je vais postuler 
-                            <span class="dashboardCandidatureCount">(0)</span>
+                            <i class="">Je vais me lancer</i>
+                            <span class="dashboardCandidatureCount"></span>
                         </span>
+                        <p>la partie commence.</p>
                     </div>
                     
                     <div type="0" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/1') }}">Ajouter une candidature</a></div>
                         <div class="dashboardColumnContainer">  
                          
                             {% for cards in vapostuler %} 
-                            <div class="dashboardCards cards card" >
-                              <ul draggable="true">
-                                <p class="card-header">{{cards.titre}}</p>  
-                                <p class="card-text">{{cards.description}}</p>
-                                <p class="card-text">Contact: {{cards.email}}</p>
-                                <p class="card-text">tel: {{cards.telephone}}</p>
-                                <footer class="blockquote-footer">{{cards.ville}}</footer>
+                            <div class="dashboardCards cards " >
+                              <ul draggable="true" class=" list-group-flush card rounded">
+                                <li class="card-header font-weight-bold">{{cards.titre}}</li>  
+                                <li class="list-group-item font-italic text-center">{{cards.description}}</li>
+                                <li class="list-group-item text-center "> {{cards.email}}</li>   
+                                <li class=" text-uppercase text-center">{{cards.ville}}</li>
                                 <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
                               </ul>
                             </div>
@@ -116,9 +115,10 @@
                 <div class="choice dashboardColumn candidature">
                     <div class="dashboardColumnTitle">
                          <span>
-                            <i class=""></i> J'ai postulé 
-                            <span class="dashboardCandidatureCount">(0)</span>
+                            <i class="">J'ai postulé!</i> 
+                            <span class="dashboardCandidatureCount"></span>
                         </span>
+                        <p>à moi de jouer.</p>
                     </div>
                     <div type="1" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/2') }}">Ajouter une candidature</a></div>
 
@@ -145,9 +145,10 @@
                     <div class=" choice dashboardColumn relance">
                         <div class="dashboardColumnTitle">
                             <span>
-                                <i class=""></i> J'ai relancé 
-                                <span class="dashboardCandidatureCount">(0)</span>
+                                <i class="">J'ai encore un vie!</i> 
+                                <span class="dashboardCandidatureCount"></span>
                             </span>
+                            <p>je relance la partie.</p>
                         </div>
                         <div type="2" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/3') }}">Ajouter une candidature</a></div>
                         <div class="dashboardColumnContainer">
@@ -172,8 +173,10 @@
                 <div class="choice dashboardColumn entretien">
                     <div class="dashboardColumnTitle">
                         <span>
-                        <i class=""></i> La rencontre du Boss<span class="dashboardCandidatureCount">(0)</span>
+                        <i class="">Dernier level</i>
+                        
                         </span>
+                        <p>la rencontre du Boss.</p>
                     </div>
                     <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/4') }}">Ajouter une candidature</a></div>
                     <div class="dashboardColumnContainer">
@@ -195,6 +198,6 @@
                 
         </div>
     </div>
-
+</section>
 
 {% endblock %}
