@@ -61,7 +61,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #000;
-    margin-left: -10px;
+    margin-left: -5px;
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -134,10 +134,10 @@
   height: 40px;
 }
 
-.dashboardCard, .dashboardColumnTitle i {
-  
-  margin-right: 100px;
-  
+
+
+.dashboardColumnContainer {
+  min-height: 25px;
 }
 
 
