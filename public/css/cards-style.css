@@ -59,7 +59,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #000;
-    margin-left: 30px;
+    margin-left: -10vh;
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -138,9 +138,7 @@
   
 }
 
-ul li {
-  list-style: none;
-}
+
 
 
 
