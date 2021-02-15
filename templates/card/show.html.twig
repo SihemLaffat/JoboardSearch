@@ -6,9 +6,10 @@
 <div class="container-fluid">
 
 <h1 class="text-center">Votre candidature</h1>
-<a href=" {{ path('cards') }} " class="button button-gradient">retour</a>
-<section class="container bg-light rounded p-2 ">
-    
+ <div class="p-2">
+    <a href=" {{ path('cards') }} " class="button button-gradient-alt ">retour</a>
+  </div>
+<section class="container bg-light rounded p-2 pb-2">
   
     <table class="table border ">
         <tbody>
@@ -46,11 +47,12 @@
             </tr>
             
         </tbody>
+         
     </table>
-
-  
-
-    <a href="{{ path('card_edit', {'id': card.id}) }}" class="button button-gradient">modifier</a>
+    <div class="d-flex justify-content-center">
+         <a href="{{ path('card_edit', {'id': card.id}) }}" class="button button-gradient">modifier</a>
+    </div>
+   
                                     
                                
   

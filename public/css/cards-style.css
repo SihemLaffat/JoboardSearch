@@ -14,7 +14,9 @@
   .dashboardContainer {
     background-color: #f4f4f4;
   }
-  
+  .dashboardColumnContainer ul li {
+    list-style-type: none;
+}
   .fa,
   .fas {
     font-family: "Font Awesome 5 Pro";

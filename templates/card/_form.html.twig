@@ -9,7 +9,9 @@
 							    <img src="{{ asset('img/writing.svg') }}" alt="logo cadenas"/>
 							    
 							    <p>Vous pouvez modifier une partie ou l'ensemble des informations et choisir également un nouveau statut</p>
-								
+								<div class="p-2">
+    								<a href=" {{ path('cards') }} " class="button button-gradient-alt ">retour</a>
+  								</div>
 								{% if card.id != null %}
 								<p>Vous pouvez également supprimer cette candidature.</p> 
 								 {{ include('card/_delete_form.html.twig') }}
@@ -48,7 +50,7 @@
                                         
 										        </div>
                                                
-										    <button class="btnRegister">{{ button_label|default('Modifier') }}</button>
+										    <button class="btnRegister">{{ button_label|default('Valider') }}</button>
 										    
                                         {{ form_end(form) }}
 										</div>	
