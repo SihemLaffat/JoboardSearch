@@ -1,5 +1,4 @@
-{% extends 'base.html.twig' %}
-       
+{% extends 'index.html.twig' %}
 
         
 {% block title %}Hello CardsController!{% endblock %}
@@ -81,11 +80,10 @@
  <section class="container-fluid">   
     <div class="tabindex tabindexcard" tabindex="-1" role="group" style="outline: none;">
 
-        <div class="dashboardBody row">
+        <div class="dashboardBody row" data-status-number='1'>
             <div class="col-md-3">
-                
-                <div class="dashboardColumn brouillon card choice">
-                    <div class="dashboardColumnTitle">
+                <div class="dashboardColumn brouillon card choice dashboardColumnContainer" data-status-number='1'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='1'>
                         <span>
                             <i class="">Je vais me lancer</i>
                             <span class="dashboardCandidatureCount"></span>
@@ -94,11 +92,11 @@
                     </div>
                     
                     <div type="0" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/1') }}">Ajouter une candidature</a></div>
-                        <div class="dashboardColumnContainer">  
+                        <div class="dashboardColumnContainer" data-status-number='1'>  
                          
                             {% for cards in vapostuler %} 
-                            <div class="dashboardCards cards " >
-                              <ul draggable="true" class=" list-group-flush card rounded">
+                            <div class="dashboardCards cards " data-status-number='1' >
+                              <ul draggable="true" class=" list-group-flush card rounded"data-status-number='1' >
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -112,8 +110,8 @@
                 </div>
 
             <div class="col-md-3">
-                <div class="choice dashboardColumn candidature">
-                    <div class="dashboardColumnTitle">
+                <div class="choice dashboardColumn candidature dashboardColumnContainer" data-status-number='2'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='2'>
                          <span>
                             <i class="">J'ai postulé!</i> 
                             <span class="dashboardCandidatureCount"></span>
@@ -121,17 +119,16 @@
                         <p>à moi de jouer.</p>
                     </div>
                     <div type="1" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/2') }}">Ajouter une candidature</a></div>
-
-                        <div class="dashboardColumnContainer">
+                        <div class="dashboardColumnContainer" data-status-number='2'>
                             {% for cards in postuler %} 
-                            <div class="dashboardCards cards card" >
-                              <ul draggable="true">
-                                <p class="card-header">{{cards.titre}}</p>  
-                                <p class="card-text">{{cards.description}}</p>
-                                <p class="card-text">Contact: {{cards.email}}</p>
-                                <p class="card-text">tel: {{cards.telephone}}</p>
-                                <footer class="blockquote-footer">{{cards.ville}}</footer>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
+                            <div class="dashboardCards cards card" data-status-number='2' >
+                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='2'>
+                                <li class="card-header">{{cards.titre}}</li>  
+                                <li class="card-text">{{cards.description}}</li>
+                                <li class="card-text">Contact: {{cards.email}}</li>
+                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                <li class=" text-uppercase text-center">{{cards.ville}}</li>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voir plus</a>
                               </ul>
                             </div>
                             {% endfor %}
@@ -140,10 +137,9 @@
                     </div>
             </div>
 
-                <div class="col-md-3">
-
-                    <div class=" choice dashboardColumn relance">
-                        <div class="dashboardColumnTitle">
+                <div class="col-md-3 dashboardColumnContainer">
+                    <div class=" choice dashboardColumn relance dashboardColumnContainer" data-status-number='3'>
+                        <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='3'>
                             <span>
                                 <i class="">J'ai encore un vie!</i> 
                                 <span class="dashboardCandidatureCount"></span>
@@ -151,16 +147,16 @@
                             <p>je relance la partie.</p>
                         </div>
                         <div type="2" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/3') }}">Ajouter une candidature</a></div>
-                        <div class="dashboardColumnContainer">
+                        <div  class="dashboardColumnContainer" data-status-number='3'>
                             {% for cards in relancer %} 
-                            <div class="dashboardCards cards card" >
-                              <ul draggable="true">
-                                <p class="card-header">{{cards.titre}}</p>  
-                                <p class="card-text">{{cards.description}}</p>
-                                <p class="card-text">Contact: {{cards.email}}</p>
-                                <p class="card-text">tel: {{cards.telephone}}</p>
-                                <footer class="blockquote-footer">{{cards.ville}}</footer>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
+                            <div class="dashboardCards cards card" data-status-number='3'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='3'>
+                                <li class="card-header">{{cards.titre}}</li>  
+                                <li class="card-text">{{cards.description}}</li>
+                                <li class="card-text">Contact: {{cards.email}}</li>
+                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                <li class=" text-uppercase text-center">{{cards.ville}}</li>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-info mt-2">Voir plus</a>
                               </ul>
                             </div>
                             {% endfor %}
@@ -169,9 +165,9 @@
                     </div>
                 </div>
 
-            <div class="col-md-3">
-                <div class="choice dashboardColumn entretien">
-                    <div class="dashboardColumnTitle">
+            <div class="col-md-3 dashboardColumnContainer">
+                <div class="choice dashboardColumn entretien dashboardColumnContainer" data-status-number='4'>
+                    <div class="dashboardColumnTitle dashboardColumnContainer"  data-status-number='4'>
                         <span>
                         <i class="">Dernier level</i>
                         
@@ -179,16 +175,16 @@
                         <p>la rencontre du Boss.</p>
                     </div>
                     <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/4') }}">Ajouter une candidature</a></div>
-                    <div class="dashboardColumnContainer">
+                    <div  class="dashboardColumnContainer" data-status-number='4'>
                             {% for cards in entretien %} 
-                            <div class="dashboardCards cards card" >
-                              <ul draggable="true">
-                                <p class="card-header">{{cards.titre}}</p>  
-                                <p class="card-text">{{cards.description}}</p>
-                                <p class="card-text">Contact: {{cards.email}}</p>
-                                <p class="card-text">tel: {{cards.telephone}}</p>
-                                <footer class="blockquote-footer">{{cards.ville}}</footer>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
+                            <div class="dashboardCards cards card" data-status-number='4'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='4'>
+                                <li class="card-header">{{cards.titre}}</li>  
+                                <li class="card-text">{{cards.description}}</li>
+                                <li class="card-text">Contact: {{cards.email}}</li>
+                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                <li class=" text-uppercase text-center">{{cards.ville}}</li>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voir plus</a>
                               </ul>
                             </div>
                             {% endfor %}

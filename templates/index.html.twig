@@ -17,6 +17,15 @@
             <link rel="stylesheet" href="{{asset('css/cards-style.css')}}">
             <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
 
+
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>      
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>      
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js" integrity="sha256-rPPF6R+AH/Gilj2aC00ZAuB2EKmnEjXlEWx5MkAp7bw=" crossorigin="anonymous"></script>
+            <script src="{{asset('js/app.js')}}"> </script>
+
+            {% block javascripts %}{% endblock %}
+            
     </head>
 
     <body>
@@ -47,7 +56,7 @@
                             <a href="#!" class="text-dark"> Cookies </a>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark">Contact</a>
+                            <a href="{{ path('contact') }}" class="text-dark">Contact</a>
                         </li>
                         <li>
                             <a href="#!" class="text-dark">Les conditions générales</a>
@@ -81,13 +90,16 @@
 
                     <ul class="list-unstyled">
                     <li>
-                        <a href="#" class="text-dark">Accueil</a>
+                        <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
                     </li>
                     <li>
                         <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
                     </li>
                     <li>
                         <a href="{{ path('cards_synthese') }}" class="text-dark">Récapitutalif</a>
+                    </li>
+                     <li>
+                        <a href="{{ path('calendar_user') }}">Calendrier</a>
                     </li>
                     <li>
                         <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>
@@ -109,6 +121,7 @@
     </footer> <!-- Fin Footer -->
 
 {% endblock %}
+<<<<<<< HEAD:templates/base.html.twig
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>  
        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    
@@ -119,6 +132,11 @@
         {% block javascripts %}{% endblock %}
         
         <script src="{{asset('js/app.js')}}"> </script>
+=======
+
+       
+
+>>>>>>> main:templates/index.html.twig
         
     </body>
 </html>

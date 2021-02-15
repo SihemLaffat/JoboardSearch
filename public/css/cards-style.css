@@ -5,6 +5,7 @@
 
  
   
+ 
   .dashboardHeader {
     width: 100%;
     display: flex;
@@ -125,9 +126,11 @@
 
 
 
-ul li {
-  list-style: none;
+.dashboardColumnContainer {
+  min-height: 25px;
 }
+
+
 
 
 
