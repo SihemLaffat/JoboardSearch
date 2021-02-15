@@ -1,32 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block header %}
-     <!-- Entete global-->
-        <div class="bg_jaune text-center text-lg-start p-4">
-    
-            <!-- container entete -->
-            <div class="container p-4">
 
-                <div class="row flex">
-
-                    <!--Logo-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
-                        <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo">                        
-                    </div> <!-- Fin logo-->
-                
-                    <!--Nom du site-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                   
-                        <h1 class="">JoBoardSearch</h1>
-                    </div> <!-- FIN Grid column nom du site-->
-                    
-                    <!--slogan-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">                    
-                        <h5 class="">slogan: bla bla bla</h5>
-                   </div> <!-- Fin slogan-->
-
-                </div> <!--Fin row-->      
-            </div> <!-- Fin container entete-->                
-        </div> <!-- Fin entete global -->
-{% endblock %}
 
 {% block title %} Connectez-vous{% endblock %}
 
@@ -50,7 +23,7 @@
                                 <div class="mb-3">
                                  Vous etes connecté {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                                 </div>
-                              {% endif %}
+                              {% else %}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1" class="text-uppercase">Adresse Email</label>
                                     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>           
@@ -59,6 +32,8 @@
                                     <label for="exampleInputPassword1" class="text-uppercase">Mot de passe</label>
                                     <input type="password" name="password" id="inputPassword" class="form-control" required>
                                 </div>
+                        
+                            
                          {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
@@ -79,7 +54,7 @@
                                 </div>
       
                             </form>
-                   
+                            {% endif %}
                         </div>
 
                         <div class="col-md-8 ">
