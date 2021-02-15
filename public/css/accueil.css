@@ -361,6 +361,10 @@ section {
 }
 
 .subscribed-image {
+    border: 2px solid var(--yellow-solid);
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
     width: 100%;
     height: 100%;
     object-fit: cover;
