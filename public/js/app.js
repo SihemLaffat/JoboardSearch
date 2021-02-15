@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     var ul = document.getElementsByTagName('ul')
     var choice = document.getElementsByClassName('choice');
