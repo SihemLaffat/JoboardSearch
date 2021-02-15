@@ -36,6 +36,7 @@ class CardFrontController extends AbstractController
                 'titre'=>$card->getTitre(),
                 'description'=> $card->getDescription(),
                 'ville'=> $card->getVille(),
+                'url'=> $card->getUrl(),
                 'telephone'=> $card->getTelephone(),
                 'email'=> $card->getEmail(),
                 'CreatedAd'=> $card->getCreatedAt()->format('Y-m-d H:i:s'),     

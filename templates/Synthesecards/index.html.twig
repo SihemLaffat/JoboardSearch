@@ -1,24 +1,70 @@
 {% extends 'index.html.twig' %}
 
+
+        
 {% block title %}Hello CardsController!{% endblock %}
 
 {% block body %}
+{% block header %}
+    <div class="container-fluid p-0">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end boder-warning boder-bottom rounded shadow">
+            <a class="navbar-brand " href="index.php">
+                <img src="{{ asset('img/logo.png') }}" width="90" height="90" class="d-inline-block align-top" alt="logo du site movies generation">
+            JBS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path('cards') }}">Acceuil<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                            <a class="nav-link" href="{{ path('cards') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="{{ path('cards_synthese') }}">Synthese</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                            <span class='number_elem_in_cart'></span>  
+                            <a class="nav-link" href="../Global/profil.php">Calendrier</a>
+                    </li>
+                
+                    <li class="nav-item position_relative">
+                        
+                          
+                        
+                        <a class="nav-link" href="{{ path('utilisateur') }}">Mon profil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link font-italic" href="{{ path('app_logout') }}">
+                                Se déconnecter
+                        </a>
+                    </li>
 
 
-<div class="w-100 p-5 rounded">
-    <div class="pb-2">
-        <a href="{{'synthese/user_data_download'}}" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Télecharger</a>
-       
-    </div>
-    <div class="">
-        <table class="table">
+                </ul>
+            </div>
+        </nav> 
+    
+{% endblock %}
+
+<div class=" mt-4 p-4 w-80 rounded">
+    
+    <div class="container bg-light shadow p-3 mb-5 bg-white rounded">
+        <table class="table table-responsive ">
             <thead class="thead-dark">
                 <tr> 
-                    <th scope="col">Date de création</th>  
+                    <th scope="col">Date de création</th>
+                    <th scope="col">Satut</th>  
                     <th scope="col">Titre</th>
                     <th scope="col">description</th>
-                    <th scope="col">ville</th>
-                    <th scope="col">Lien</th>
+                    <th scope="col">ville</th>  
                     <th scope="col">coordonnées</th>   
                 </tr>
             </thead>
@@ -27,10 +73,10 @@
                 <tr>
                    
                     <td>{{ cards.createdAt | date('Y-m-d')}}</td>
+                    <td>{{ cards.statuscard }}</td>
                     <td>{{ cards.titre }}</td>
                     <td>{{ cards.description }}</td>
                     <td>{{ cards.ville }}</td>
-                    <td>{{ cards.url }}</td>
                     <td>{{ cards.email }}</td>
                 </tr>
             {% endfor %}
@@ -39,7 +85,12 @@
            {% if usercards is empty %}
                 <p>pas de candidature en cours</p>
             {% endif %}
-
-    </div>            
+    <div class="">
+        <a href="{{'synthese/user_data_download'}}" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Télecharger</a>
+       
+    </div> 
+    </div> 
+           
 </div>
+ </div>  
 {% endblock %}

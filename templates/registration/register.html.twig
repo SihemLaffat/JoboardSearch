@@ -32,27 +32,63 @@
 {% block title %}Formulaire d'inscription{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
+ 
+   
+
+    <div class="container register ">  
+   {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-   
+    					<div class="row">
+						    <div class="col-md-6 register-left">
+							    <img src="{{ asset('img/cadenas.png') }}" alt="logo cadenas"/>
+							    <h3>Bienvenue</h3>
+							    <p>remplissez les informations necessaires et accédez à votre espace Joboard!</p>
+						    </div>
+						    <div class="col-md-6 register-right">
+							
+							    <div class="tab-content" id="myTabContent">
+								    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+									    <h3 class="register-heading">Inscription JoboardSearch</h3>
+									    <div class="row register-form">
+                                            {{ form_start(registrationForm) }}
+										    <div class="col-md-9 align-center">
+											
+											    <div class="row">
 
-    <div class="container p-5">  
-         <a class="mt-2 p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
-        <h1 class="mt-5 text-center bg-secondary text-light">Formulaire d'inscription</h1>
-
-        {{ form_start(registrationForm) }}
-        
-        <div class="mt-5"> {{form_row(registrationForm.sexe )}} </div>
-        <div class="mt-2"> {{form_row(registrationForm.nom, {'attr': {'class':'form-control'}})}} </div>
-        <div class="mt-2"> {{ form_row(registrationForm.prenom, {'attr': {'class':'form-control'}})}}</div>
-        <div class="mt-2"> {{form_row(registrationForm.email, {'attr': {'class':'form-control'}})}} </div>
-        <div class="mt-2"> {{ form_row(registrationForm.plainPassword,{'attr': {'class':'form-control'}}, {
-                label: 'Password',
-            }) }} </div>
-            <div class="text-center"> {{ form_row(registrationForm.agreeTerms) }}</div>
-            <div class="text-center"> <button type="submit" class="btn bg-warning p-2"> Valider</button></div>
-        {{ form_end(registrationForm) }}
+													<div class=" form-group p-2 ">{{form_row(registrationForm.sexe )}} </div>    
+											        <div class=" form-group p-2 "> {{form_row(registrationForm.nom, {'attr': {'class':'form-control'}})}} </div>
+											        <div class="form-group p-2"> {{ form_row(registrationForm.prenom, {'attr': {'class':'form-control'}})}}</div>
+											        
+                                                    <div class="form-group p-2">
+												    {{form_row(registrationForm.email, {'attr': {'class':'form-control'}})}}
+                                                    </div>
+											    
+											        <div class="form-group p-2">
+												    {{ form_row(registrationForm.plainPassword,{'attr': {'class':'form-control'}}, {label: 'Password', }) }} 
+                                                    </div>
+											    
+										        </div>
+                                                <div class="form-group ">
+												    {{ form_row(registrationForm.agreeTerms) }}
+											    </div>
+											 
+										    <input type="submit" class="btnRegister"  value="Valider"/>
+										    
+                                        {{ form_end(registrationForm) }}
+											
+											
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+	
+         <a class="mt-2 p-2 rounded bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
+  
+           
     </div>
 {% endblock %}
