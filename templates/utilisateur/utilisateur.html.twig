@@ -5,18 +5,26 @@
 
 {% block body %}
        
-    <a class="mt-2 p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
+    
+ <a class="mt-2 p-2 bg-warning" href="{{ path('accueil') }}"> Retour à l'accueil</a>
 
   <div class="container">
     
-    <h2 class="mt-5 text-center bg-secondary text-light"> Mes coordonnées </h2>
+      <h2 class="mt-5 text-center bg-secondary text-light"> Mon profil </h2>
 
-    <p class="m-4">Nom de famille : {{utilisateur.nom }} </p>
-    <p class="m-4">Prénom : {{utilisateur.prenom }}</p>
-    <p class="m-4">Email : {{utilisateur.email }}</p>
-    <p class="m-4">Avatar : {{utilisateur.photo }}</p> 
-
-    
+      <div class="card m-auto" style="width: 18rem;">
+        <img class="card-img-top" src="{{ asset('img/avatar.png') }}" alt="Card image cap">
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item h3">{{utilisateur.nom }}</li>
+          <li class="list-group-item h3">{{utilisateur.prenom }}</li>
+          <li class="list-group-item h3">{{utilisateur.email }}</li>
+        </ul>
+        <div class="card-body text-center">
+          <a href="#" class="card-link bg-light">Modifier Mon profil</a>
+          <a href="#" class="card-link"></a>
+        </div>
+      </div>
+    </div>
  </div>
 
 
