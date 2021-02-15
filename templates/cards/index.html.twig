@@ -64,7 +64,7 @@
                             <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='2' >
          
 
-                              <ul draggable="true" data-card-id="{{cards.id}}" class="dashboardColumnContainer" data-status-number='2'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='2'>
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -91,7 +91,7 @@
                         <div  class="dashboardColumnContainer" data-status-number='3'>
                             {% for cards in relancer %} 
                             <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='3'>
-                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='3'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='3'>
                                  <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -118,7 +118,7 @@
                     <div  class="dashboardColumnContainer" data-status-number='4'>
                             {% for cards in entretien %} 
                             <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='4'>
-                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='4'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='4'>
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
