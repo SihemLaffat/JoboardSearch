@@ -34,7 +34,7 @@ class RegistrationFormType extends AbstractType
 
             ->add('nom', TextType::class, [
             'required' => true,
-            'label'=>'Nom de famille',
+            'label'=>'Nom',
              ])
              ->add('prenom', TextType::class,[
             'required'=> true,
@@ -51,7 +51,7 @@ class RegistrationFormType extends AbstractType
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
-                'label' =>"Mot passe",
+                'label' =>"Mot de passe",
                 'mapped' => false,
                 'constraints' => [
                     new NotBlank([

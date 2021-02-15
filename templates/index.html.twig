@@ -72,6 +72,9 @@
                         <a class="nav-link" href="{{ path('cards_synthese') }}">Récapitulatif</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ path('calendar_user') }}">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Notification</a>
                     </li>
                 </ul>
@@ -152,13 +155,16 @@
 
                     <ul class="list-unstyled">
                     <li>
-                        <a href="#" class="text-dark">Accueil</a>
+                        <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
                     </li>
                     <li>
                         <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
                     </li>
                     <li>
                         <a href="{{ path('cards_synthese') }}" class="text-dark">Récapitutalif</a>
+                    </li>
+                     <li>
+                        <a href="{{ path('calendar_user') }}">Calendrier</a>
                     </li>
                     <li>
                         <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>

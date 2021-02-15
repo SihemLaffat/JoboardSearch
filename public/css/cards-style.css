@@ -3,15 +3,13 @@
   list-style: none;
 }
 
-  body {
+  .dashboardBody {
+    position: relative;
+    min-height: 100%;
     font-family: Roboto, sans-serif;
   }
   
-  html {
-    position: relative;
-    min-height: 100%;
-  }
-  
+ 
   .dashboardHeader {
     width: 100%;
     display: flex;
