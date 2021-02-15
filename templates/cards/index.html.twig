@@ -121,14 +121,13 @@
                     <div type="1" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/2') }}">Ajouter une candidature</a></div>
                         <div class="dashboardColumnContainer" data-status-number='2'>
                             {% for cards in postuler %} 
-                            <div class="dashboardCards cards card" data-status-number='2' >
+                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='2' >
                               <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='2'>
-                                <li class="card-header">{{cards.titre}}</li>  
-                                <li class="card-text">{{cards.description}}</li>
-                                <li class="card-text">Contact: {{cards.email}}</li>
-                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                <li class="card-header font-weight-bold">{{cards.titre}}</li>  
+                                <li class="list-group-item font-italic text-center">{{cards.description}}</li>
+                                <li class="list-group-item text-center "> {{cards.email}}</li>   
                                 <li class=" text-uppercase text-center">{{cards.ville}}</li>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voir plus</a>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
                               </ul>
                             </div>
                             {% endfor %}
@@ -151,12 +150,11 @@
                             {% for cards in relancer %} 
                             <div class="dashboardCards cards card" data-status-number='3'>
                               <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='3'>
-                                <li class="card-header">{{cards.titre}}</li>  
-                                <li class="card-text">{{cards.description}}</li>
-                                <li class="card-text">Contact: {{cards.email}}</li>
-                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
+                                <li class="list-group-item font-italic text-center">{{cards.description}}</li>
+                                <li class="list-group-item text-center "> {{cards.email}}</li>   
                                 <li class=" text-uppercase text-center">{{cards.ville}}</li>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-info mt-2">Voir plus</a>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>s</a>
                               </ul>
                             </div>
                             {% endfor %}
@@ -177,14 +175,13 @@
                     <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/4') }}">Ajouter une candidature</a></div>
                     <div  class="dashboardColumnContainer" data-status-number='4'>
                             {% for cards in entretien %} 
-                            <div class="dashboardCards cards card" data-status-number='4'>
+                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='4'>
                               <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='4'>
-                                <li class="card-header">{{cards.titre}}</li>  
-                                <li class="card-text">{{cards.description}}</li>
-                                <li class="card-text">Contact: {{cards.email}}</li>
-                                <li class="card-text">tel: {{cards.telephone}}</li>
+                                <li class="card-header font-weight-bold">{{cards.titre}}</li>  
+                                <li class="list-group-item font-italic text-center">{{cards.description}}</li>
+                                <li class="list-group-item text-center "> {{cards.email}}</li>   
                                 <li class=" text-uppercase text-center">{{cards.ville}}</li>
-                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voir plus</a>
+                                <a href="{{ path('card_show',{id: cards.id}) }}" class="btn btn-light mt-2">Voi plus</a>
                               </ul>
                             </div>
                             {% endfor %}
