@@ -6,51 +6,7 @@
 
 {% block body %}
 {% block header %}
-    <div class="container-fluid p-0">
-       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end boder-warning boder-bottom rounded shadow">
-            <a class="navbar-brand " href="index.php">
-                <img src="{{ asset('img/logo.png') }}" width="90" height="90" class="d-inline-block align-top" alt="logo du site movies generation">
-            JBS
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('cards') }}">Acceuil<span class="sr-only">(current)</span></a>
-                    </li>
-                    
-                    <li class="nav-item">
-                            <a class="nav-link" href="{{ path('cards') }}">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="{{ path('cards_synthese') }}">Synthese</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                            <span class='number_elem_in_cart'></span>  
-                            <a class="nav-link" href="../Global/profil.php">Calendrier</a>
-                    </li>
-                
-                    <li class="nav-item position_relative">
-                        
-                          
-                        
-                        <a class="nav-link" href="{{ path('utilisateur') }}">Mon profil</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link font-italic" href="{{ path('app_logout') }}">
-                                Se déconnecter
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
-        </nav> 
     
 {% endblock %}
 
