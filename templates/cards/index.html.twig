@@ -96,7 +96,7 @@
                          
                             {% for cards in vapostuler %} 
                             <div class="dashboardCards cards dashboardColumnContainer" data-status-number='1' >
-                              <ul draggable="true" class=" list-group-flush card rounded dashboardColumnContainer" data-status-number='1' >
+                              <ul draggable="true" data-card-id="{{cards.id}}" class=" list-group-flush card rounded dashboardColumnContainer" data-status-number='1' >
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
