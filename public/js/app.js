@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $.ajax({
             method: "PUT",
             url: "/card/" + cardId + "/status",
-            data: { statusNumber: statusNumberTaget }
+            data: { statusNumber: statusNumberTarget }
         })
             .done(function (msg) {
                 console.log(msg)
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     function dragLeave(e) {
         //console.log(e.srcElement.getElementsByClassName('dashboardColumnContainer').srcElement[0].dataset)
-        statusNumberTaget = e.srcElement.getElementsByClassName('dashboardColumnContainer')[0].dataset.statusNumber
+        statusNumberTarget = e.srcElement.getElementsByClassName('dashboardColumnContainer')[0].dataset.statusNumber
         console.log(e.srcElement.getElementsByClassName('dashboardColumnContainer')[0].dataset.statusNumber)
         e.preventDefault();
     }

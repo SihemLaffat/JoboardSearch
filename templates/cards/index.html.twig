@@ -95,8 +95,8 @@
                         <div class="dashboardColumnContainer" data-status-number='1'>  
                          
                             {% for cards in vapostuler %} 
-                            <div class="dashboardCards cards " data-status-number='1' >
-                              <ul draggable="true" class=" list-group-flush card rounded"data-status-number='1' >
+                            <div class="dashboardCards cards dashboardColumnContainer" data-status-number='1' >
+                              <ul draggable="true" data-card-id="{{cards.id}}" class=" list-group-flush card rounded dashboardColumnContainer" data-status-number='1' >
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -122,7 +122,9 @@
                         <div class="dashboardColumnContainer" data-status-number='2'>
                             {% for cards in postuler %} 
                             <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='2' >
-                              <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='2'>
+         
+
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="dashboardColumnContainer" data-status-number='2'>
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -148,7 +150,7 @@
                         <div type="2" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/3') }}">Ajouter une candidature</a></div>
                         <div  class="dashboardColumnContainer" data-status-number='3'>
                             {% for cards in relancer %} 
-                            <div class="dashboardCards cards card" data-status-number='3'>
+                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='3'>
                               <ul draggable="true" data-card-id="{{cards.id}}" data-status-number='3'>
                                  <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
