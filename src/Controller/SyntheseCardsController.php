@@ -37,7 +37,7 @@ class SyntheseCardsController extends AbstractController
         $userData = $cardService->csvExport($user);
         $response = new Response($userData);
         $response->headers->set('Content-Type', 'text/csv');
-        $response->headers->set('Content-Disposition', 'attachment; filename="testing.csv"');
+        $response->headers->set('Content-Disposition', 'attachment; filename="joboardserch.csv"');
 
         return $response;
 

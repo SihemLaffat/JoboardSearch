@@ -104,7 +104,7 @@ class CardBackController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('card_index');
+        return $this->redirectToRoute('cards');
     }
     
 
