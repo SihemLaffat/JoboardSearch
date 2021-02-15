@@ -9,8 +9,12 @@
 							    <img src="{{ asset('img/writing.svg') }}" alt="logo cadenas"/>
 							    
 							    <p>Vous pouvez modifier une partie ou l'ensemble des informations et choisir également un nouveau statut</p>
-								<p>Vous pouvez également supprimer cette candidature.</p>
+								
+								{% if card.id != null %}
+								<p>Vous pouvez également supprimer cette candidature.</p> 
 								 {{ include('card/_delete_form.html.twig') }}
+								{% endif %}
+
 						</div>
 						<div class="col-md-6 register-right">
 							

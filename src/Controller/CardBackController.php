@@ -84,7 +84,7 @@ class CardBackController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('card_index');
+            return $this->redirectToRoute('cards');
         }
 
         return $this->render('card/edit.html.twig', [

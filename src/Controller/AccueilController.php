@@ -16,6 +16,7 @@ class AccueilController extends AbstractController
     {
         return $this->render('accueil/accueil.html.twig', [
             'controller_name' => 'AccueilController',
+            'noNavbar' => true
         ]);
     }
 }

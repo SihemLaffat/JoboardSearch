@@ -1,5 +1,64 @@
-{% extends 'base-accueil-calendar.html.twig' %}
+{% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <link rel="stylesheet" href="{{asset('css/accueil.css')}}">   
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    
+    <script src="{{asset('js/accueil.js')}}"> </script>
+    <script>
+        $(document).ready(function() {
+            //Initialisation AOS
+            AOS.init({
+                easing: 'ease',
+                duration: 2000,
+                once: true
+            });
+
+                    /* Slider */
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+        const slides = document.querySelectorAll('.slide');
+
+        let indexS = 0;
+        display(indexS);
+        function display (indexS) {
+            slides.forEach((slide) => {
+                slide.style.display = 'none';
+            });
+            slides[indexS].style.display = 'flex';
+        };
+
+        function nextSlide () {
+            indexS++;
+            if (indexS > slides.length - 1) {
+                indexS = 0;
+            }
+            display(indexS);
+        };
+
+        function prevSlide () {
+            indexS--;
+            if (indexS< 0) {
+                indexS = slides.length - 1;
+            }
+            display(indexS);
+        };
+
+        next.addEventListener('click', nextSlide);
+        prev.addEventListener('click', prevSlide);
+
+        });
+
+
+
+
+
+    </script>
+{% endblock %}
 
 
 {% block body %}
@@ -173,57 +232,5 @@
 
             </main>
         </div>
-
-
-{% block javascripts %}
-<script>
-$(document).ready(function() {
-    
-
-    //Initialisation AOS
-    AOS.init({
-        easing: 'ease',
-        duration: 2000,
-        once: true
-    });
-});
-
-
-
-/* Slider */
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
-const slides = document.querySelectorAll('.slide');
-
-let indexS = 0;
-display(indexS);
-function display (indexS) {
-	slides.forEach((slide) => {
-		slide.style.display = 'none';
-	});
-	slides[indexS].style.display = 'flex';
-};
-
-function nextSlide () {
-	indexS++;
-	if (indexS > slides.length - 1) {
-		indexS = 0;
-	}
-	display(indexS);
-};
-
-function prevSlide () {
-	indexS--;
-	if (indexS< 0) {
-		indexS = slides.length - 1;
-	}
-	display(indexS);
-};
-
-next.addEventListener('click', nextSlide);
-prev.addEventListener('click', prevSlide);
-
-</script>
-{% endblock javascripts %}
 
 {% endblock %}
