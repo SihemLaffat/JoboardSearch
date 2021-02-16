@@ -11,15 +11,15 @@
         <h1>Mon profil</h1>
 </div> 
   <div class="container min-vh-100 ">
-    
-     
-
-      <div class="card m-auto   p-4" style="width: 18rem;">
-        <img class="card-img-top" src="{{ asset('img/avatar.png') }}" alt="Avatar utilisateur">
+      <div class="card m-auto p-4" style="width: 18rem;">
+        <img class="card-img-top" src="{{ asset('img/users.png') }}" alt="Avatar utilisateur">
+        <div class="body-card text-center">
+          <h5>Mes informations</h5>
+        </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item h3">{{utilisateur.nom }}</li>
-          <li class="list-group-item h3">{{utilisateur.prenom }}</li>
-          <li class="list-group-item h3">{{utilisateur.email }}</li>
+          <li class="list-group-item h4">{{utilisateur.prenom }}</li>
+          <li class="list-group-item p">{{utilisateur.email }}</li>
         </ul>
       </div>
     </div>
