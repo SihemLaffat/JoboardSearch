@@ -12,11 +12,10 @@
 
 {% block body %}
 
-<div class="text-center">
+<div class="text-center p-2 mb-4">
         <h1>Mes candidatures !</h1>
 </div>
-    <hr>
-    <hr>
+    
  <section class="container-fluid">   
     <div class="tabindex tabindexcard" tabindex="-1" role="group" style="outline: none;">
 
@@ -25,7 +24,7 @@
                 <div class="dashboardColumn brouillon card choice dashboardColumnContainer" data-status-number='1'>
                     <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='1'>
                         <span>
-                            <i class="">Je vais me lancer</i>
+                            <i class="">Je vais me lancer,</i>
                             <span class="dashboardCandidatureCount"></span>
                         </span>
                         <p>la partie commence.</p>
@@ -36,7 +35,7 @@
                          
                             {% for cards in vapostuler %} 
                             <div class="dashboardCards cards dashboardColumnContainer" data-status-number='1' >
-                              <ul draggable="true" data-card-id="{{cards.id}}" class=" list-group-flush card rounded dashboardColumnContainer" data-status-number='1' >
+                              <ul draggable="true" data-card-id="{{cards.id}}" class=" list-group-flush card rounded " data-status-number='1' >
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -53,7 +52,7 @@
                 <div class="choice dashboardColumn candidature dashboardColumnContainer" data-status-number='2'>
                     <div class="dashboardColumnTitle dashboardColumnContainer" data-status-number='2'>
                          <span>
-                            <i class="">J'ai postulé!</i> 
+                            <i class="">J'ai postulé,</i> 
                             <span class="dashboardCandidatureCount"></span>
                         </span>
                         <p>à moi de jouer.</p>
@@ -61,10 +60,10 @@
                     <div type="1" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/2') }}">Ajouter une candidature</a></div>
                         <div class="dashboardColumnContainer" data-status-number='2'>
                             {% for cards in postuler %} 
-                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='2' >
+                            <div class="dashboardCards cards dashboardColumnContainer" data-status-number='2' >
          
 
-                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='2'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded " data-status-number='2'>
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -85,13 +84,13 @@
                                 <i class="">J'ai encore un vie!</i> 
                                 <span class="dashboardCandidatureCount"></span>
                             </span>
-                            <p>je relance la partie.</p>
+                            <p>Je relance la partie.</p>
                         </div>
                         <div type="2" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/3') }}">Ajouter une candidature</a></div>
                         <div  class="dashboardColumnContainer" data-status-number='3'>
                             {% for cards in relancer %} 
-                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='3'>
-                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='3'>
+                            <div class="dashboardCards cards dashboardColumnContainer" data-status-number='3'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded " data-status-number='3'>
                                  <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
@@ -109,7 +108,7 @@
                 <div class="choice dashboardColumn entretien dashboardColumnContainer" data-status-number='4'>
                     <div class="dashboardColumnTitle dashboardColumnContainer"  data-status-number='4'>
                         <span>
-                        <i class="">Dernier level</i>
+                        <i class="">Dernier level,</i>
                         
                         </span>
                         <p>la rencontre du Boss.</p>
@@ -117,8 +116,8 @@
                     <div type="3" class="newCandidatureButton"><strong>+</strong><a href="{{('card/new/4') }}">Ajouter une candidature</a></div>
                     <div  class="dashboardColumnContainer" data-status-number='4'>
                             {% for cards in entretien %} 
-                            <div class="dashboardCards cards card dashboardColumnContainer" data-status-number='4'>
-                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded dashboardColumnContainer" data-status-number='4'>
+                            <div class="dashboardCards cards dashboardColumnContainer" data-status-number='4'>
+                              <ul draggable="true" data-card-id="{{cards.id}}" class="list-group-flush card rounded " data-status-number='4'>
                                 <li class="card-header font-weight-bold">{{cards.titre}}</li>  
                                 <li class="list-group-item font-italic text-center">{{cards.description}}</li>
                                 <li class="list-group-item text-center "> {{cards.email}}</li>   
