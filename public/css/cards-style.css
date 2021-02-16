@@ -14,9 +14,7 @@
   .dashboardContainer {
     background-color: #f4f4f4;
   }
-  .dashboardColumnContainer:hover{
-    background-color: rgba(127, 255, 144, 0.5);
-  }
+  
   .dashboardColumnContainer ul li {
     list-style-type: none;
 }
