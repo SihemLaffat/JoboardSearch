@@ -54,7 +54,7 @@ class Card
      */
     private $status_card;
        /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=2550)
      */
     private $url;
 
