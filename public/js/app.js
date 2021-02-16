@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var ul = document.getElementsByTagName('ul')
     var choice = document.getElementsByClassName('choice');
     var dragItem = null;
-    var statusNumberTaget = null;
+    var statusNumberTarget = null;
 
     for (var i of ul) {
         i.addEventListener('dragstart', dragStart);
