@@ -37,10 +37,7 @@
                                     <input type="password" name="password" id="inputPassword" class="form-control" required>
                                 </div>                            
                                 <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        <small>Se souvenirs de moi</small>
-                                    </label>
+                                    
                                     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                                     <button type="submit" class="btn butn-login float-right">Connexion</button>
                                 </div>
