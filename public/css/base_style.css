@@ -120,13 +120,11 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
-.copyright span{
-    color:  rgba(253, 187, 45, 0.8);
-}
+
 
 .footer-bg{
     background: rgb(69,67,67);
-    background: linear-gradient(0deg, rgba(69,67,67,0.9925012241224614) 22%, rgba(253, 187, 45, 0.668) 84%);
+    background: linear-gradient(180deg, rgba(69,67,67,0.9925012241224614) 8%, rgba(247,205,113,0.894462008436187) 100%);
 }
 /* End footer */
 
