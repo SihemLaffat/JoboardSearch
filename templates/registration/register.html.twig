@@ -35,7 +35,7 @@
  
    
 
-    <div class="container register ">  
+    <div class="container register min-vh-100">  
    {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}

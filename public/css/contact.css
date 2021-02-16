@@ -83,3 +83,87 @@
 }
 
 
+
+@media only screen and (max-width: 768px) {
+    .profile-card-4 {
+        max-width: 200px;
+        margin: 5px auto;
+        
+    }
+    
+    .profile-card-4 img {
+        width: 100px;
+        height: 80px;
+      
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+
+
+@media only screen and (max-width: 580px) {
+    
+    H1{
+        font-size: 0.6;
+    }
+    .profile-card-4 {
+        max-width: 150px;
+        margin: 5px auto;
+        
+    }
+    
+    .profile-card-4 img {
+        width: 100px;
+        height: 80px;
+      
+    }
+    
+.profile-card-4 .profile-content {
+    position: relative;
+    padding: 0 auto;
+    background-color: rgb(248, 244, 244);
+}
+
+.profile-card-4 .profile-name {
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -18px;
+    color: rgb(87, 85, 87);
+    font-size: 13px;
+}
+
+.profile-card-4 .profile-name p {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.profile-card-4 .profile-description {
+    color: #777;
+    font-size: 12px;
+    padding: 0 auto;
+}
+
+.profile-card-4 .profile-overview {
+    font-size: x-small;
+    padding: 0 auto ;
+}
+
+.profile-card-4 .profile-overview p {
+    font-size: x-small;
+   
+    
+}
+
+}
+
+@media screen and (max-width: 376px) {
+    
+
+    
+}
