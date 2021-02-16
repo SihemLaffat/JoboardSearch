@@ -106,22 +106,17 @@ p, a{
 
 /* header  */
 
-.logo_base{
-    width: 180px;
-}
-
-.logo{ 
-    width: 300px;
-    align-items: center;
+.navbar-brand span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: var(--red);
 }
 
 .nav-link{ /* navbar */
     font-size: 1.2rem;
     
 }
-nav-bg{
-    background-color: aquamarine;
-}
+
 /* fin header  */
 
 
