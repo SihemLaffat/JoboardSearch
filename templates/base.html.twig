@@ -43,21 +43,25 @@
 
             <div class="row flex">
 
-                <!--Grid column 1-->
+                 <!--Grid column 1-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                   <h5 class="text-uppercase">Les donneés</h5>
+                    <h5 class="text-uppercase mb-0">Plan du site</h5>
+
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="text-dark"> RGPD </a>
+                            <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark"> Cookies </a>
+                            <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
                         </li>
                         <li>
-                            <a href="{{ path('contact') }}" class="text-dark">Contact</a>
+                            <a href="{{ path('cards_synthese') }}" class="text-dark">Récapitutalif</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark">Les conditions générales</a>
+                            <a href="{{ path('calendar_user') }}">Calendrier</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>
                         </li>
                     </ul>
                 </div> <!-- Fin Grid column 1-->
@@ -67,43 +71,32 @@
                     <h5 class="text-uppercase">Social Network</h5>
 
                     <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-dark"> Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark"> Lien 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 4</a>
-                    </li>
+                        <li>
+                            <a href="https://fr-fr.facebook.com/" target="_blank" class="text-dark"> Facebook </a>
+                        </li>
+                        <li>
+                            <a href="https://fr.linkedin.com/" target="_blank" class="text-dark"> Linkdin</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/?hl=fr" target="_blank" class="text-dark"> Instagram </a>
+                        </li>                
                     </ul>
                 </div> <!-- FIN Grid column 2-->
-                
-                <!--Grid column 3-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Plan du site</h5>
 
+                 <!--Grid column 3-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                   <h5 class="text-uppercase">Les donneés</h5>
                     <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cards_synthese') }}" class="text-dark">Récapitutalif</a>
-                    </li>
-                     <li>
-                        <a href="{{ path('calendar_user') }}">Calendrier</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>
-                    </li>
+                        <li>
+                            <a href="#!" class="text-dark"> RGPD </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact') }}" class="text-dark">Contact</a>
+                        </li>               
                     </ul>
                 </div> <!-- Fin Grid column 3-->
+                
+
                 
              </div> <!--Grid row-->
             
