@@ -36,77 +36,89 @@
 
         <!-- Footer -->
     {% block footer %}
-    <footer class=" mt-2 text-center text-lg-start bg_gris">
+    <footer class="footer-bg">
     
         <!-- Grid container -->
-        <div class="container p-4">
+        <div class="container p-4 ">
 
-            <div class="row flex">
+                <div class=" d-flex  justify-content-center flex-wrap">
 
-                 <!--Grid column 1-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Plan du site</h5>
+                         <!--Grid column 1-->
+                            <div class="col-lg-4 col-md-6 mb-2">
+                                    <h5 class="text-uppercase text-center ">Plan du site</h5>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="{{ path('accueil') }}" class="text-dark">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('cards') }}" class="text-dark">Tableau de bord</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('cards_synthese') }}" class="text-dark">Récapitutalif</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('calendar_user') }}">Calendrier</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('utilisateur') }}" class="text-dark"> Mon compte</a>
-                        </li>
-                    </ul>
-                </div> <!-- Fin Grid column 1-->
+                                    <ul class="list-unstyled mb-0 text-center ">
+                                        {% if app.user %}
+                                        <li>
+                                            <a href="{{ path('cards') }}" class="text-dark">Joboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('cards_synthese') }}" class="text-dark">Synthèse</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('calendar_user') }}">Calendrier</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('utilisateur') }}">Mon profil</a>
+                                        </li>
+                                        {% else %}
+                                        <li>
+                                            <a href="#" class="text-dark">Accueil</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('app_register') }}" class="text-dark">Inscription</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('app_login') }}">Connexion</a>
+                                        </li>
+                                        
+                                        {% endif %}
+                                        
+                                        
+
+                                    </ul>
+                            </div> <!-- Fin Grid column 1-->
             
-                <!--Grid column 2-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Social Network</h5>
+                            <!--Grid column 2-->
+                            <div class="col-lg-4 col-md-6 mt-2 ">
+                                    <h5 class="text-uppercase text-center">Social Network</h5>
 
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="https://fr-fr.facebook.com/" target="_blank" class="text-dark"> Facebook </a>
-                        </li>
-                        <li>
-                            <a href="https://fr.linkedin.com/" target="_blank" class="text-dark"> Linkdin</a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/?hl=fr" target="_blank" class="text-dark"> Instagram </a>
-                        </li>                
-                    </ul>
-                </div> <!-- FIN Grid column 2-->
+                                        <ul class="list-unstyled mb-0 text-center">
+                                            <li>
+                                                <a href="https://fr-fr.facebook.com/" target="_blank" class="text-dark"> Facebook </a>
+                                            </li>
+                                            <li>
+                                            <a href="https://fr.linkedin.com/" target="_blank" class="text-dark"> Linkdin</a>
+                                            </li>
+                                            <li>
+                                            <a href="https://www.instagram.com/?hl=fr" target="_blank" class="text-dark"> Instagram </a>
+                                            </li>                
+                                        </ul>
+                            </div> <!-- FIN Grid column 2-->
 
-                 <!--Grid column 3-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                   <h5 class="text-uppercase">Les donneés</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!" class="text-dark"> RGPD </a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact') }}" class="text-dark">Contact</a>
-                        </li>               
-                    </ul>
-                </div> <!-- Fin Grid column 3-->
+                            <!--Grid column 3-->
+                            <div class="col-lg-4 col-md-6 mt-2">
+                                <h5 class="text-uppercase text-center">Les donneés</h5>
+                                <ul class="list-unstyled mb-0 text-center">
+                                    <li>
+                                        <a href="#!" class="text-dark"> RGPD </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('contact') }}" class="text-dark">Contact</a>
+                                    </li>               
+                                </ul>
+                            </div> <!-- Fin Grid column 3-->
                 
 
                 
-             </div> <!--Grid row-->
+                </div> <!--Grid row-->
             
         </div>
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3 bg_jaune">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">Sihem, Nathalie, Aymrick, Sahby</a>
+        <div class="text-center p-3 copyright">
+            <span> © 2020 Copyright: Sihem, Nathalie & Sahby</span>
         </div> <!-- Fin Copyright -->
         
     </footer> <!-- Fin Footer -->
