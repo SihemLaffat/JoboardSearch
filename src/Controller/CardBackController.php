@@ -78,7 +78,7 @@ class CardBackController extends AbstractController
      */
     public function edit(Request $request, Card $card): Response
     {
-        $form = $this->createForm(CardType::class, $card);
+        $form = $this->createForm(CardType::class, $card,['defaultStatus'=> $card->getStatusCard()]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
